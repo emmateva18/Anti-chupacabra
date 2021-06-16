@@ -6,10 +6,10 @@
     font-family: 'Roboto', sans-serif;
     --text-primary: #fff;
     --text-secondary: #000;
-    --element-primary: #2F4866;
-    --element-secondary: #CE2029;
-    --element-tertiary: #3785d3;
-    --element-quaternary: #2f95fa;
+    --element-primary: #2F3843;
+    --element-secondary: #426E86;
+    --element-tertiary: #F9C34D;
+    --element-quaternary: #fff;
     --transition-speed: 300ms;
 }
 
@@ -41,6 +41,7 @@ header {
 }
   
 body.header-not-at-top header {
+    border-radius: 10px;
     position: fixed;
     margin-left: 1rem;
     z-index: 1;
@@ -78,6 +79,15 @@ body.header-not-at-top nav ul li a {
     float: left;
     font-weight: 700;
     text-decoration: none;
+
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1.6px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: var(--transition-speed);
+}
+
+.logo:hover {
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 1);
 }
 
 nav {
@@ -100,10 +110,10 @@ nav ul li {
 
 nav ul li a {
     display: block;
+    border-radius: 10px;
     margin: 10px 0;
     padding: 10px 20px;
     text-decoration: none;
-    border-radius: 10px;
     color: var(--text-secondary);
     text-transform: uppercase;
     font-size: 1.1rem;
@@ -113,6 +123,8 @@ nav ul li a:hover {
     background: var(--element-primary);
     color: #fff;
     border-radius: 10px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+
     transition: var(--transition-speed);
 }
 
@@ -156,15 +168,15 @@ nav ul li a:hover {
 }
 
 .dropdown-content {
+    border-radius: 10px;
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: rgba(255, 255, 255, 0.5);
     min-width: 160px;
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
     padding: 12px 16px;
     z-index: 1;
     text-decoration: none;
-    border-radius: 10px;
     text-transform: uppercase;
 }
 
@@ -191,4 +203,336 @@ body.header-not-at-top .dropdown-content {
 
 .white {
     color: var(--text-primary);
+}
+
+/* --------------------- Footer -----------------------*/
+
+
+.about-us {
+  text-decoration: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: var(--transition-speed);
+}
+
+.about-us:hover {
+  color: var(--element-quaternary);
+}
+
+.content1 {
+  position: relative;
+  margin: 130px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+footer {
+  margin-top: 300px;
+  padding-bottom: 30px;
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  background: var(--element-primary);
+}
+
+.main-content {
+  display: flex;
+}
+
+.main-content .box {
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+
+.box h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.box .content {
+  margin: 20px 0 0 0;
+  position: relative;
+}
+
+.left .content p {
+  text-align: justify;
+}
+
+.left .content .social {
+  margin: 20px 0 0 0;
+}
+
+.left .content .social a {
+  padding: 0 2px;
+}
+
+.left .content .social a span {
+  height: 40px;
+  width: 40px;
+  background: var(--text-secondary);
+  line-height: 40px;
+  text-align: center;
+  font-size: 1.25rem;
+  border-radius: 10px;
+  transition: var(--transition-speed);
+  color: var(--text-primary)
+}
+
+.left .content .social a span:hover {
+  background: var(--element-tertiary);
+}
+
+.content .fas {
+  font-size: 1.5rem;
+  background: var(--text-secondary);
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: var(--transition-speed);
+}
+
+.content .fas:hover {
+  background: var(--element-quaternary);
+}
+
+.content .text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.content .phone {
+  margin: 15px 0;
+}
+
+.right form .text {
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.right form input, .right form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  background: var(--text-secondary);
+  padding-left: 10px;
+  border: 1px solid var(--text-secondary);
+  color: var(--text-primary);
+  border-radius: 10px;
+}
+
+.right form input:focus,
+.right form textarea:focus {
+  outline-color: var(--element-quaternary);
+}
+
+.right form input {
+  height: 35px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.right form .btn {
+  margin-top: 10px;
+}
+
+.right form .btn button {
+  height: 40px;
+  width: 100%;
+  border: none;
+  background: var(--element-quaternary);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: var(--transition-speed);
+}
+
+.right form .btn button:hover{
+  background: var(--element-tertiary);
+}
+
+@media screen and (max-width: 900px) {
+  footer{
+    position: relative;
+    bottom: 0px;
+  }
+  .main-content{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box{
+    margin: 5px 0;
+  }
+}
+
+/* --------------------- Footer -----------------------*/
+
+
+.about-us {
+    text-decoration: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: var(--transition-speed);
+}
+  
+.about-us:hover {
+    color: var(--element-quaternary);
+}
+  
+.content1 {
+    position: relative;
+    margin: 130px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+  
+footer {
+    margin-top: 300px;
+    padding-bottom: 30px;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    background: var(--element-primary);
+}
+  
+.main-content {
+    display: flex;
+}
+  
+.main-content .box {
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+  
+.box h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+  
+.box .content {
+    margin: 20px 0 0 0;
+    position: relative;
+}
+  
+.left .content p {
+    text-align: justify;
+}
+  
+.left .content .social {
+    margin: 20px 0 0 0;
+}
+  
+.left .content .social a {
+    padding: 0 2px;
+}
+
+.left .content .social a span {
+    height: 40px;
+    width: 40px;
+    background: var(--text-secondary);
+    line-height: 40px;
+    text-align: center;
+    font-size: 1.25rem;
+    border-radius: 10px;
+    transition: var(--transition-speed);
+    color: var(--text-primary)
+}
+  
+.left .content .social a span:hover {
+    background: var(--element-tertiary);
+}
+  
+.content .fas {
+    font-size: 1.5rem;
+    background: var(--text-secondary);
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: var(--transition-speed);
+}
+  
+.content .fas:hover {
+    background: var(--element-quaternary);
+}
+  
+.content .text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+  
+.content .phone {
+    margin: 15px 0;
+}
+  
+.right form .text {
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+  
+.right form input, .right form textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    background: var(--text-secondary);
+    padding-left: 10px;
+    border: 1px solid var(--text-secondary);
+    color: var(--text-primary);
+    border-radius: 10px;
+}
+  
+.right form input:focus,
+  .right form textarea:focus {
+    outline-color: var(--element-quaternary);
+}
+  
+.right form input {
+    height: 35px;
+}
+  
+textarea {
+    resize: vertical;
+}
+  
+.right form .btn {
+    margin-top: 10px;
+}
+  
+.right form .btn button {
+    height: 40px;
+    width: 100%;
+    border: none;
+    background: var(--element-quaternary);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: var(--transition-speed);
+}
+  
+.right form .btn button:hover{
+    background: var(--element-tertiary);
+}
+  
+@media screen and (max-width: 900px) {
+    footer{
+        position: relative;
+        bottom: 0px;
+    }
+    .main-content{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .main-content .box{
+        margin: 5px 0;
+    }
 }
