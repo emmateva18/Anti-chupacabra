@@ -21,11 +21,13 @@ function displayError(res, message) {
 router.post('/registration', async function(req, res, next) {
     console.log(req.body)
 
-    if (typeof req.body.name !== "undefined" && req.body.name === "") {
-        return displayError(res, "The name cannot be empty!");
-    }
 
     try {
+
+        if (typeof req.body.name !== "undefined" && req.body.name === "") {
+            throw Error("The name cannot be empty!");
+        }
+
         // SAVE DATA TO SQL
         const pool = await sql.connect(config);
         const result = await pool.request()
@@ -42,8 +44,13 @@ router.post('/registration', async function(req, res, next) {
         console.log(result)
 
     } catch (e) {
-        console.log(e.message)
-        return displayError(res, "Error!");
+        console.log(e);
+
+        if (e instanceof sql.RequestError) {
+            return displayError(res, "A database error has occured! Please try again later.");
+        } else {
+            return displayError(res, e.message);
+        }
         return;
     }
 
