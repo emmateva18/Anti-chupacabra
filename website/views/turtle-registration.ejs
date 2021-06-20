@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registrations</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>Register a turtle</h1>
+
+    <% if (typeof error !== "undefined") { %>
+        <p style="color: red">
+            <%=error%>
+        </p>
+        <% } %>
+
+            <form method="POST" action="/turtles/registration">
+                <input type="text" name="name" value="ivan">
+                <input type="text" name="Breed" value="blatna">
+                <input type="text" name="Sex" value="1">
+                <input type="text" name="Age" value="100">
+                <button type="submit">Submit</button>
+            </form>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        
+        <title>Project</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    </head>
+
+    <body class="background">
+
+    <!-- Navigation Bar -->
+    <div id="jsUsed">
+        <header class="header-color">
+          <a href="index.html" class="logo">AQUA</a>
+          <div class="menu-toggle"></div>
+          <nav>
+            <ul>
+              <li><a href="html/team.html">Team</a></li>
+              <li><a href="html/equipment.html">Equipment</a></li>
+              <li><a href="html/location.html">Location</a></li>
+                <div class="dropdown">
+                  <li><a>Report</a></li>
+                  <div class="dropdown-content">
+                    <li><a href="html/reportFire.html">Report a fire</a></li>
+                    <li><a href="html/reportBug.html">Report a bug</a></li>
+                  </div>
+                </div>
+            </ul>
+          </nav>
+          <div class="clearfix"></div>
+        </header>
+      </div>
+
+      <!-- Picture Slider -->
+      <div class="slider">
+        <div class="slide active">
+          <img src="img/BG.jpg" alt="">
+          <div class="info">
+            <h2>Winter Mountains</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/BG.jpg" alt="">
+          <div class="info">
+            <h2>Tropical Desert</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/BG.jpg" alt="">
+          <div class="info">
+            <h2>Steaming Volcanoes</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/BG.jpg" alt="">
+          <div class="info">
+            <h2>Mountain River</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="img/BG.jpg" alt="">
+          <div class="info">
+            <h2>Egypt Pyramids</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="navigation">
+          <i class="fas fa-chevron-left prev-btn"></i>
+          <i class="fas fa-chevron-right next-btn"></i>
+        </div>
+        <div class="navigation-visibility">
+          <div class="slide-icon active"></div>
+          <div class="slide-icon"></div>
+          <div class="slide-icon"></div>
+          <div class="slide-icon"></div>
+          <div class="slide-icon"></div>
+        </div>
+      </div>
+
+      <div>
+        OUR TEAM
+		<% if (typeof user !== "undefined") { %>
+			<p>Hello, <%= user.name %></p>
+		<% }; %>
+      </div>
+
+      <!--   footer   -->
+      <footer class="white">
+        <div class="main-content">
+          <div class="left box">
+            <a href="html/aboutUs.html" class="about-us"><h2>About us</h2></a>
+            <div class="content">
+              <p>We are team Anti-Chupacabra and we were given a task to create a website about our important turtles.</p>
+              <div class="social">
+                <a href="" onclick="notExisting(); return false"><span class="fab fa-facebook-f"></span></a>
+                <a href="" onclick="notExisting(); return false"><span class="fab fa-instagram"></span></a>
+                <a href="" onclick="notExisting(); return false"><span class="fab fa-youtube"></span></a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="center box">
+            <h2>Address</h2>
+            <div class="content">
+              <div class="place">
+                <span class="fas fa-map-marker-alt"></span>
+                <span class="text">Burgas, Bulgaria</span>
+              </div>
+              <div class="phone">
+                <span class="fas fa-phone-alt"></span>
+                <span class="text">+359 XXX XXX XXX</span>
+              </div>
+              <div class="email">
+                <span class="fas fa-envelope"></span>
+                <span class="text">Anti-Chupacabra@gmail.com</span>
+              </div>
+            </div>
+          </div>
+  
+          <div class="right box">
+            <h2>Contact us</h2>
+            <div class="content">
+              <form action="https://formspree.io/f/xqkweznw" method="POST">
+                <div class="email">
+                  <div class="text">Email *</div>
+                  <input type="email" name="email" required>
+                </div>
+                <div class="msg">
+                  <div class="text">Message *</div>
+                  <textarea name="message" required></textarea>
+                </div>
+                <div class="btn">
+                  <button type="submit">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+  
+        <div class="bottom center">
+          <span><i>Created By Anti-Chupacabra</i></span>
+        </div>
+      </footer>
+
+      <div id="top-of-site-pixel-anchor"></div>
+      <script src ="js/main.js"></script>
+
+      <!--Font Awesome CDN BOOTSTRAP-->
+      <script src="https://kit.fontawesome.com/55c91cfd61.js" crossorigin="anonymous"></script>
+      <!--jQuery CDN BOOTSTRAP-->
+      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+      <script>
+        $(document).ready(function() {
+          $('.menu-toggle').click(function() {
+              $('.menu-toggle').toggleClass('active')
+              $('nav').toggleClass('active')
+          })
+      })
+    </script>
+    </body>
+</html>
