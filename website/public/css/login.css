@@ -1,5 +1,5 @@
-
-:root { /*CSS variables*/
+:root {
+    /*CSS variables*/
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
     --text-primary: #fff;
@@ -11,8 +11,9 @@
     --element-quaternary: #fff; */
     --transition-speed: 300ms;
 }
-  
-  html, body {
+
+html,
+body {
     height: 100vh;
     width: 100vw;
     margin: 0 0;
@@ -20,23 +21,23 @@
     align-items: flex-start;
     justify-content: flex-start;
     background: var(--text-primary);
-  }
-  
-  h4 {
+}
+
+h4 {
     font-size: 24px;
     font-weight: 600;
     color: var(--text-secondary);
     opacity: 0.85;
-  }
-  
-  label {
+}
+
+label {
     font-size: 0.5rem;
     color: var(--text-secondary);
     opacity: 0.8;
     font-weight: 400;
-  }
-  
-  form {
+}
+
+form {
     padding: 2rem 1.2rem;
     color: var(--text-secondary);
     display: flex;
@@ -44,16 +45,19 @@
     align-items: flex-start;
     padding-bottom: 0.8rem;
     border-radius: 0.4rem;
-  }
-  form h4 {
+}
+
+form h4 {
     margin-bottom: 0.8rem;
     color: rgba(0, 0, 0, 0.5);
-  }
-  form h4 span {
+}
+
+form h4 span {
     color: var(--text-secondary);
     font-weight: 700;
-  }
-  form p {
+}
+
+form p {
     line-height: 155%;
     margin-bottom: 0.2rem;
     font-size: 0.6rem;
@@ -62,9 +66,9 @@
     font-weight: 400;
     max-width: 18rem;
     margin-bottom: 2rem;
-  }
-  
-  a.discrete {
+}
+
+a.discrete {
     color: rgba(0, 0, 0, 0.4);
     font-size: 0.6rem;
     border-bottom: solid 1px rgba(0, 0, 0, 0);
@@ -73,12 +77,13 @@
     font-weight: 300;
     transition: all 0.3s ease;
     margin-top: 2rem;
-  }
-  a.discrete:hover {
+}
+
+a.discrete:hover {
     border-bottom: solid 1px rgba(0, 0, 0, 0.2);
-  }
-  
-  button {
+}
+
+button {
     -webkit-appearance: none;
     width: auto;
     min-width: 5rem;
@@ -95,16 +100,18 @@
     border: none;
     transition: all 0.3s ease;
     outline: 0;
-  }
-  button:hover{
+}
+
+button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 2px 6px -1px  var(--text-tertiary);
-  }
-  button:hover:active {
+    box-shadow: 0 2px 6px -1px var(--text-tertiary);
+}
+
+button:hover:active {
     transform: scale(0.99);
-  }
-  
-  input{
+}
+
+input {
     font-size: 16px;
     padding: 20px 0px;
     height: 56px;
@@ -117,19 +124,20 @@
     color: var(--text-secondary);
     font-weight: 400;
     -webkit-appearance: none;
-  }
-  input:focus {
+}
+
+input:focus {
     border-bottom: solid 1px var(--text-tertiary);
     outline: 0;
-    box-shadow: 0 2px 6px -8px  var(--text-tertiary);
-  }
-  
-  .floating-label {
+    box-shadow: 0 2px 6px -8px var(--text-tertiary);
+}
+
+.floating-label {
     position: relative;
     margin-bottom: 10px;
-  }
-  
-  .session {
+}
+
+.session {
     display: flex;
     flex-direction: row;
     width: auto;
@@ -138,20 +146,21 @@
     color: var(--text-secondary);
     border-radius: 4px;
     box-shadow: 0px 2px 6px -1px rgba(0, 0, 0, 0.12);
-  }
-  
-  .left {
+}
+
+.left {
     width: 220px;
     height: auto;
     min-height: 100%;
     position: relative;
-    background-image: url("loginPic.jpg");
+    background-image: url("../img/loginPic.jpg");
     background-size: cover;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-  }
-  .left svg {
+}
+
+.left svg {
     height: 40px;
     width: auto;
     margin: 20px;
-  }
+}
