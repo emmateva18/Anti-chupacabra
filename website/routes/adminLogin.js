@@ -1,12 +1,16 @@
 var express = require('express');
+const { config } = require('../db/config')
+const sql = require('mssql/msnodesqlv8')
 var router = express.Router();
 
-router.get('/', function(req, res, next) {
+
+
+router.get('/login', function(req, res, next) {
     res.render('adminLogin')
 });
 
-router.get('/registration', async function(req, res, next) {
-    console.log(req.body)
+router.post('/login', async function(req, res, next) {
+    //console.log(req.body)
 
     try {
 
@@ -16,20 +20,16 @@ router.get('/registration', async function(req, res, next) {
 
         const pool = await sql.connect(config);
         const result = await pool.request()
-            //.query(`SELECT TOP 2 * FROM production.products;`) 
-            .input("Username", sql.NVarChar, req.body.username)
-            .input("Password", sql.NVarChar, req.body.password)
+            .query(`
+                SELECT * FROM Admins
+                `)
 
-        .query(`
-                SELECT [Username], [Password] 
-                FROM Admin
-
-                INSERT INTO Animals (Name, Breed, Sex, Age)
-                VALUES (@Name, @Breed, @Sex, @Age)
-            `)
-            //.query(`EXEC Tutorial.dbo.CreateUser N'User1' N'Pass123'`)
-        console.log(result)
-
+        if (req.body.username == result.username && req.body.password == result.password) {
+            console.log("basi maikata")
+        }
+        console.log("form: " + req.body.username)
+        console.log("result: " + result)
+            //console.log(result)
 
     } catch (e) {
         console.log(e);
@@ -39,10 +39,9 @@ router.get('/registration', async function(req, res, next) {
         } else {
             return displayError(res, e.message);
         }
-        return;
     }
 
 
-    res.redirect("/registration");
+    res.redirect("/admin/login");
 });
 module.exports = router;

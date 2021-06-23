@@ -51,7 +51,6 @@ router.post('/registration', async function(req, res, next) {
         } else {
             return displayError(res, e.message);
         }
-        return;
     }
 
     res.redirect("/turtles/registration");

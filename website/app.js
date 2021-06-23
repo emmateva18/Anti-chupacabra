@@ -27,7 +27,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/team', teamRouter);
 app.use('/turtles', turtleRegistrationRouter);
-app.use('/adminLogin', adminLogin);
+app.use('/admin', adminLogin);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
