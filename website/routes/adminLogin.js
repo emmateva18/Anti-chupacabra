@@ -20,16 +20,22 @@ router.post('/login', async function(req, res, next) {
 
         const pool = await sql.connect(config);
         const result = await pool.request()
-            .query(`
-                SELECT * FROM Admins
-                `)
+            .query(`SELECT [Username], [PasswordHash] FROM Admins`)
 
-        if (req.body.username == result.username && req.body.password == result.password) {
-            console.log("basi maikata")
+        const crypto = require('crypto')
+
+        const sha256sum = crypto.createHash('sha256');
+        const passHashed = sha256sum.update(req.body.password).digest('hex');
+
+        //console.log(res);
+
+        if (req.body.username == result.recordset[0].Username) {
+            console.log("Username matched")
         }
-        console.log("form: " + req.body.username)
-        console.log("result: " + result)
-            //console.log(result)
+
+        if (passHashed == result.recordset[0].PasswordHash) {
+            console.log("Password matched")
+        }
 
     } catch (e) {
         console.log(e);
@@ -40,7 +46,6 @@ router.post('/login', async function(req, res, next) {
             return displayError(res, e.message);
         }
     }
-
 
     res.redirect("/admin/login");
 });
