@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registrations</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>Login as admin</h1>
+
+    <% if (typeof error !== "undefined") { %>
+        <p style="color: red">
+            <%=error%>
+        </p>
+        <% } %>
+
+            <form method="POST" action="/adminLogin">
+                <input type="text" name="username" value="Admin">
+                <input type="password" name="password" value="123">
+                <button type="submit">Submit</button>
+            </form>
+</body>
+
+</html>

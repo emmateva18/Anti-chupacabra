@@ -21,7 +21,6 @@ function displayError(res, message) {
 router.post('/registration', async function(req, res, next) {
     console.log(req.body)
 
-
     try {
 
         if (typeof req.body.name !== "undefined" && req.body.name === "") {
@@ -42,6 +41,7 @@ router.post('/registration', async function(req, res, next) {
             `)
             //.query(`EXEC Tutorial.dbo.CreateUser N'User1' N'Pass123'`)
         console.log(result)
+
 
     } catch (e) {
         console.log(e);
