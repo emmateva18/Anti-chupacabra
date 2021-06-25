@@ -86,7 +86,7 @@
 
                         <div class="col-sm-12">
                             <label for="firstName" class="form-label">Donated By</label>
-                            <input name="firstName" id="firstName" value=1 type="text" class="form-control" placeholder="Peter Williams">
+                            <input name="donatorId" id="firstName" value=1 type="text" class="form-control" placeholder="Peter Williams">
                             <div class="invalid-feedback">
                                 Valid name is required.
                             </div>
@@ -106,45 +106,38 @@
                             </div>
                         </div>
 
+
+
+
                         <div class="col-sm-12">
-                            <hr class="my-4">
-                            <span class="input-group-text">Turle State</span>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" name="Injured" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                        Injured
-                        </label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="isInjured" />
+                                <label class="form-check-label" for="flexCheckDefault">
+                            Is Injured
+                            </label>
                             </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                                <label class="form-check-label" for="flexRadioDefault2">
-                        Wellbeing
-                        </label>
+
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <select name="Severity" value=1 class="form-control" id="" required>
+                          <option>Injury severity</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                        </select>
+                                </div>
                             </div>
                             <hr class="my-4">
                         </div>
 
                         <div class="col-sm-12">
-                            <div class="form-group">
-                                <select name="Severity" value=1 class="form-control" id="" required>
-                      <option>Severity</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                      <option>6</option>
-                      <option>7</option>
-                      <option>8</option>
-                      <option>9</option>
-                      <option>10</option>
-                    </select>
-                            </div>
-                        </div>
-
-
-                        <div class="col-sm-12">
-                            <hr class="my-4">
                             <span class="input-group-text">Gender</span>
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="male" id="flexRadioDefault3">
