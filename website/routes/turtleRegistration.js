@@ -95,7 +95,7 @@ async function insertRecord(req) {
 
 router.post('/registration', async function(req, res, next) {
 
-    console.log(req.body.acceptedDate)
+    console.log(req.body)
         //insertAnimals(req)
         //insertRecord(req)
 
