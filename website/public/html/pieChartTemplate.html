@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+    </head>
+<body>
+    <canvas id="pie-chart" width="200" height="200"></canvas>
+    <script>
+    new Chart(document.getElementById("pie-chart"), {
+        type: 'pie',
+        data: {
+          labels: ["Male","Female"],
+          datasets: [{
+            backgroundColor: ["#426E86", "#F9C34D"],
+            data: [500,500] //countMale,countFemale
+          }]
+        
+        },
+        
+    options: { 
+        plugins: {
+            title: {
+                display: true,
+                text: 'Chart for male to female ratio'
+            }
+        },
+    }
+    });
+    </script>
+</body>
+</html>
