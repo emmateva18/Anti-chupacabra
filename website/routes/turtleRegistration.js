@@ -22,7 +22,7 @@ async function insertAnimals(req) {
 
     try {
 
-        if (typeof req.body.name !== "undefined" && req.body.name === "") {
+        if (typeof req.body.breed !== "undefined" && req.body.breed === "") {
             throw Error("The name cannot be empty!");
         }
 
@@ -33,13 +33,13 @@ async function insertAnimals(req) {
         const pool = await sql.connect(config);
         const result = await pool.request()
             //.query(`SELECT TOP 2 * FROM production.products;`) 
-            .input("Name", sql.NVarChar, req.body.turtleName)
-            .input("Breed", sql.NVarChar, req.body.breed)
+
+        .input("Breed", sql.NVarChar, req.body.breed)
             .input("Sex", sql.Bit, gender)
             .input("Age", sql.SmallInt, req.body.age)
             .query(`
-                      INSERT INTO Animals (Name, Breed, Sex, Age)
-                      VALUES (@Name, @Breed, @Sex, @Age)
+                      INSERT INTO Animals (Breed, Sex, Age)
+                      VALUES (@Breed, @Sex, @Age)
                   `)
             //.query(`EXEC Tutorial.dbo.CreateUser N'User1' N'Pass123'`)
         console.log(result)
