@@ -55,29 +55,33 @@ async function insertAnimals(req) {
     }
 }
 
-async function insertRecord(req) {
+async function insertRecord(req, res) {
     try {
 
         if (typeof req.body.name !== "undefined" && req.body.name === "") {
             throw Error("The name cannot be empty!");
         }
 
-        let isInjured = (req.body.Injured == "on")
-
+        let isInjured = (req.body.isInjured == "on")
+        let severity = null;
+        if (req.body.Severity != "undefined") {
+            severity = req.body.Severity;
+        }
         // SAVE DATA TO SQL
         const pool = await sql.connect(config);
         const result = await pool.request()
             //.query(`SELECT TOP 2 * FROM production.products;`) 
             .input("AnimalId", sql.Int, req.body.id)
             .input("AcceptedOn", sql.Date, req.body.acceptedDate)
-            .input("DonatedById", sql.Bit, donatorId)
+            .input("DonatorName", sql.NVarChar, req.body.donatorName)
+            .input("DonatorPhone", sql.NVarChar, req.body.donatorPhone)
             .input("Town", sql.SmallInt, req.body.Town)
             .input("Place", sql.SmallInt, req.body.Place)
             .input("IsInjured", sql.SmallInt, isInjured)
             .input("InjurySeverity", sql.SmallInt, req.body.Severity)
             .query(`
-                      INSERT INTO Animals (AnimalId, AcceptedOn, DonatedById, Town, Place, IsInjured, InjurySeverity)
-                      VALUES (@AnimalId, @AcceptedOn, @DonatedById, @Town, @Place, @IsInjured, @InjurySeverity)
+                      INSERT INTO Animals (AnimalId, AcceptedOn, DonatorName, DonatorPhone, Town, Place, IsInjured, InjurySeverity)
+                      VALUES (@AnimalId, @AcceptedOn, @DonatorName, @DonatorPhone, @Town, @Place, @IsInjured, @InjurySeverity)
                   `)
             //.query(`EXEC Tutorial.dbo.CreateUser N'User1' N'Pass123'`)
         console.log(result)
@@ -97,7 +101,7 @@ router.post('/registration', async function(req, res, next) {
 
     console.log(req.body)
         //insertAnimals(req)
-        //insertRecord(req)
+        //insertRecord(req, res)
 
     res.redirect("/turtles/registration");
 });
