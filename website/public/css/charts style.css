@@ -1,0 +1,240 @@
+:root { /*CSS variables*/
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    --text-primary: #fff;
+    --text-secondary: #000;
+    --element-primary: #2F3843;
+    --element-secondary: #426E86;
+    --element-tertiary: #F9C34D;
+    --element-quaternary: #fff;
+    --transition-speed: 300ms;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgba(236, 236, 236, 0.972);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+    margin: 0px auto;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: var(--transition-speed);
+    margin-bottom: 0.5rem;
+}
+  
+body.header-not-at-top header {
+    border-radius: 10px;
+    position: fixed;
+    margin-left: 1rem;
+    z-index: 1;
+}
+
+.header-color {
+    background-image: url(img.jpg.png);
+    background-size: cover;
+}
+
+body.header-not-at-top .header-color {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+body.header-not-at-top nav ul li a {
+    color: var(--text-primary);
+}
+
+.logo {
+    color: var(--element-tertiary);
+    height: 50px;
+    font-size: 36px;
+    line-height: 60px;
+    padding: 0 20px;
+    text-align: center;
+    box-sizing: border-box;
+    float: left;
+    font-weight: 700;
+    text-decoration: none;
+
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: var(--transition-speed);
+}
+
+.logo:hover {
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+}
+
+nav {
+    float: left;
+}
+
+.clearfix { /* fixes invisible box */
+    clear: both;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    min-width: 160px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
+    padding: 12px 16px;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+body.header-not-at-top .dropdown-content {
+    background-color: var(--text-secondary);
+}
+
+.center {
+    text-align: center;
+}
+
+.white {
+    color: var(--text-primary);
+}
+
+/* -----First Chart----- */
+
+.Chart-Filler1{
+    margin-left: 354px;
+    margin-top: 108px;
+    position: absolute;
+}
+.Chart-icon1{
+    margin-left: 85px;
+    margin-top: 301px;
+    position: absolute;
+}
+
+.Chart-container1{
+    margin-left: 316px;
+    margin-top: 80px;
+    position: absolute;
+}
+
+.Chart1{
+    width: 900px; 
+    height: 550px;
+    margin-left: 805px;
+    margin-top: 140px;
+    position: absolute;
+}
+
+/* -----Second Chart----- */
+
+.Chart-Filler2{
+    margin-left: 20px;
+    margin-top: 808px;
+    position: absolute;
+}
+.Chart-icon2{
+    margin-left: 1560px;
+    margin-top: 1001px;
+    position: absolute;
+}
+
+.Chart-container2{
+    margin-left: 0px;
+    margin-top: 780px;
+    position: absolute;
+}
+
+.Chart2{
+    width: 1125px;
+    height: 775px;
+    margin-left: 70px;
+    margin-top: 880px;
+    position: absolute;
+}
+
+/* -----Third Chart----- */
+
+.Chart-Filler3{
+    margin-left: 369px;
+    margin-top: 1508px;
+    position: absolute;
+}
+.Chart-icon3{
+    margin-left: 90px;
+    margin-top: 1701px;
+    position: absolute;
+}
+
+.Chart-container3{
+    margin-left: 331px;
+    margin-top: 1480px;
+    position: absolute;
+}
+
+.Chart3{
+    width: 550px; 
+    height: 200px;
+    margin-left: 910px;
+    margin-top: 1510px;
+    position: absolute;
+}
+
+/* -----Forth Chart----- */
+
+.Chart-Filler4{
+    margin-left: 20px;
+    margin-top: 2208px;
+    position: absolute;
+}
+.Chart-icon4{
+    margin-left: 1560px;
+    margin-top: 2401px;
+    position: absolute;
+}
+
+.Chart-container4{
+    margin-left: 0px;
+    margin-top: 2180px;
+    position: absolute;
+}
+
+.Chart4{
+    width: 550px; 
+    height: 200px;
+    margin-left: 370px;
+    margin-top: 2210px;
+    position: absolute;
+}

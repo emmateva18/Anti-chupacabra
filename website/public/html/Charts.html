@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <link rel = "Stylesheet" type = "text/css" href = "charts style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+</head>
+    <body>
+        <header class="header-color">
+            <a href="#" class="logo">AQUA</a>
+            <div class="menu-toggle"></div>
+            <div id = "img-background">
+                <nav>
+                <ul>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Register A Turtle</a></li>
+                    <li><a href="#">Location</a></li>
+                    <div class="dropdown">
+                        <li><a>Report</a></li>
+                        <div class="dropdown-content">
+                        <li><a href="#">Report a fire</a></li>
+                        <li><a href="#">Report a bug</a></li>
+                        </div>
+                    </div>
+                </ul>
+                </nav>
+            </div>
+            <div class="clearfix"></div>
+        </header>
+        <div>
+            <img class = "Chart-icon1" src="Chart1-icon.png" width = "172px" height = "172px">
+            <img class = "Chart-container1" src="Chart1-back.png" height = "619px" width = "1499px" >
+            <img class = "Chart-Filler1" src = "Chart-filler-right.png" height = "563px" width = "1439px">
+            <div class = "Chart1">
+                <canvas id="bar-chart" width="800" height="450">
+                  <script>
+                  new Chart(document.getElementById("bar-chart"), {
+                  type: 'bar',
+                  data: {
+                    labels: ["1-5 days", "6-10 days", "11-20 days", "20-50 days", "50+ days"],
+                    datasets: [
+                      {
+                        backgroundColor: ["#426E86", "#1f456e","#63c5da","#48aaad","#0492c2"],
+                        data: [50,75,83,20,6]
+                      }
+                    ]
+                  },
+                  options: {
+                      plugins: {
+                    legend: { display: false },
+                    title: {
+                      display: true,
+                      text: 'Number of turtles according to how many days they spent in the facility'
+                    }}
+                  }
+                  });
+                  </script>
+                </canvas>
+              </div>
+        </div>
+
+        <div>
+            <img class = "Chart-container2" src="Chart2-back.png" height = "619px" width = "1499px" >
+            <img class = "Chart-Filler2" src = "Chart-filler-left.png" height = "563px" width = "1439px">
+            <div class = "Chart2">
+                <canvas id="mixed-chart" width="400" height="150">
+                <script>
+                new Chart(document.getElementById("mixed-chart"), {
+                type: 'bar',
+                data: {
+                labels: ["2017","2018", "2019", "2020", "2021"],
+                datasets: [{
+                type: "line",
+                borderColor: "#F9C34D",
+                data: [225,250,302,275,306],
+                fill: true
+                }]
+                // Block chart elements can be added
+                },
+                options: {
+                plugins: {
+                title: {
+                display: true,
+                text: 'Number of turtles in the last 5 years'
+                },
+                legend: { display: false }
+                }}
+                });
+                </script>
+                </canvas>
+            </div>
+            <img class = "Chart-icon2" src="Chart2-icon.png" width = "172px" height = "172px">
+        </div>
+
+        <div>
+            <img class = "Chart-icon3" src="Chart3-icon.png" width = "172px" height = "172px">
+            <img class = "Chart-container3" src="Chart3-back.png" height = "619px" width = "1499px" >
+            <img class = "Chart-Filler3" src = "Chart-filler-right.png" height = "563px" width = "1439px">
+            <div class = "Chart3">
+                <canvas id="pie-chart" width="200" height="200">
+                    <script>
+                    new Chart(document.getElementById("pie-chart"), {
+                        type: 'pie',
+                        data: {
+                          labels: ["Male","Female"],
+                          datasets: [{
+                            backgroundColor: ["#426E86", "#F9C34D"],
+                            data: [621,479] //countMale, countFemale
+                          }]
+                        
+                        },
+                        
+                    options: { 
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Chart for male to female ratio'
+                            }
+                        },
+                    }
+                    });
+                    </script>
+                    </canvas>
+              </div>
+        </div>
+        
+        <div>
+            <img class = "Chart-container4" src="Chart4-back.png" height = "619px" width = "1499px" >
+            <img class = "Chart-Filler4" src = "Chart-filler-left.png" height = "563px" width = "1439px">
+            <div class = "Chart4">
+                <canvas id="polar-chart" width="800" height="450">
+                    <script>new Chart(document.getElementById("polar-chart"), {
+                        type: 'polarArea',
+                        data: {
+                          labels: ["Sofia", "Plovdiv", "Varna", "Burgas", "Ruse"],
+                          datasets: [
+                            {
+                              backgroundColor: ["#426E86", "#1f456e","#63c5da","#48aaad","#0492c2"],
+                              data: [202,150,170,195,165]// Sofia, Plovdiv, Varna, Burgas, Ruse
+                            }
+                          ]
+                        },
+                        options: {
+                            plugins: {
+                          title: {
+                            display: true,
+                            text: 'Number of turtles from the 5 largest cities in Bulgaria'
+                          }
+                        }}
+                    });
+                    </script>
+                    </canvas>
+            </div>
+            <img class = "Chart-icon4" src="Chart4-icon.png" width = "172px" height = "172px">
+        </div>
+    </body>
+</html>
