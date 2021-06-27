@@ -63,9 +63,6 @@ async function updateAnimals(req, res) {
             throw Error("The name cannot be empty!");
         }
 
-        // female = 0, male = 1 
-        let gender = (req.body.male == "on")
-
         // SAVE DATA TO SQL
         const pool = await sql.connect(config);
         const result = await pool.request()
