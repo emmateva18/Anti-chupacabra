@@ -619,38 +619,60 @@ textarea {
  .main{
   width: 70%;  
   height: 400px;  
-  margin: 100px auto;  
-  position: relative;  
+  margin: 200px auto;
+  position: relative;
 }  
 .main li{
   display: inline-block;  
 }  
 .content{ 
-  border-radius: 25px; 
+  border-radius: 50px; 
   background-color: var(--element-secondary);
-  color: #fff;  
+  color: var(--element-quaternary);  
   position: absolute;  
   left: 0;  
   display: none;  
   padding: 30px;  
-  top: 35px;  
+  top: 35px; 
 }  
 .content>p{  
   font-size: 1em;  
   font-weight: 300;  
-  margin: 10px;  
+  margin: 10px; 
 }  
 .main [id^="label"]:checked~.content{  
   display: block;  
 }  
 .main input[type="radio"]{  
-  display: none;  
+  display: none;
 }  
 .main label{  
-  padding: 20px 30px;  
+  padding: 20px 30px;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--element-quaternary);  
 }  
 .main [id^="label"]:checked + label{ 
   border-radius: 25px;
   background-color: var(--element-secondary);
-  color: #fff;  
-}  
+  color: var(--element-quaternary);  
+}
+
+.img {
+  border-radius: 50%;
+}
+
+.link {
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--element-tertiary);
+  font-size: 1.2rem;
+}
+
+.background-blog {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 25px;
+  min-width: 1200px;
+  margin: 2rem;
+}
