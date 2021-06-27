@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="../css/Homepage style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="img/tutrleLogoCircle.png">
+        
+        <title>AQUA</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    </head>
+
+    <body class="background">
+
+    <!-- Navigation Bar -->
+    <div id="jsUsed">
+        <header class="header-color">
+          <a href="index.html" class="logo">AQUA</a>
+          <div class="menu-toggle"></div>
+          <nav>
+            <ul>
+              <li><a href="html/team.html">Team</a></li>
+              <li><a href="turtle-registration.ejs">Register A Turtle</a></li>
+              <li><a href="html/location.html">Location</a></li>
+                <div class="dropdown">
+                  <li><a>Report</a></li>
+                  <div class="dropdown-content">
+                    <li><a href="html/reportFire.html">Report a fire</a></li>
+                    <li><a href="html/reportBug.html">Report a bug</a></li>
+                  </div>
+                </div>
+            </ul>
+          </nav>
+          <div class="clearfix"></div>
+        </header>
+      </div>
+
+      <!-- Picture Slider -->
+      <div class="slider">
+        <div class="slide active">
+            <img src="https://www.seabrookisland.com/wp-content/uploads/2020/07/WEBSITE_Wildlife_Turtle_Olivia-Helsel_Turtle-Trek_copy_Rotatd-crpd2-banner.jpg" alt="">
+            <div class="info">
+              <h2>The future is ahead</h2>
+              <p>Every year less and less turtles hatch from their egg and begin their struggle for survival.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://thetortoiseandturtlesource.com/wp-content/uploads/2020/09/childs-hands-holding-turtle_147984695_0.jpg" alt="">
+            <div class="info">
+              <h2>They need our help</h2>
+              <p>We can help them thrive and regain the diversity in species they once had.</p>
+            </div>
+          </div>
+        <div class="slide">
+            <img src="https://www.gannett-cdn.com/-mm-/61010c4fc113a25c4bef268b3a1443bb29d3b31b/c=19-89-4926-2862/local/-/media/2018/04/12/USATODAY/USATODAY/636591334179413866-AFP-AFP-13Y5A3.jpg" alt="">
+            <div class="info">
+              <h2>There are only a few left</h2>
+              <p>Many species have fallen under the endangered and extinct bar in the last decade.</p>
+            </div>
+        </div>
+        <div class="navigation">
+          <i class="fas fa-chevron-left prev-btn"></i>
+          <i class="fas fa-chevron-right next-btn"></i>
+        </div>
+        <div class="navigation-visibility">
+          <div class="slide-icon active"></div>
+          <div class="slide-icon"></div>
+          <div class="slide-icon"></div>
+        </div>
+      </div>
+
+      <!--
+        <div class="slide active">
+          <img src="https://www.seabrookisland.com/wp-content/uploads/2020/07/WEBSITE_Wildlife_Turtle_Olivia-Helsel_Turtle-Trek_copy_Rotatd-crpd2-banner.jpg" alt="">
+          <div class="info">
+            <h2>The future is ahead</h2>
+            <p>Every year less and less turtles hatch from their egg and begin their struggle for survival.</p>
+          </div>
+        </div>
+        <div class="slide active">
+          <img src="https://thetortoiseandturtlesource.com/wp-content/uploads/2020/09/childs-hands-holding-turtle_147984695_0.jpg" alt="">
+          <div class="info">
+            <h2>They need our help</h2>
+            <p>We can help them thrive and regain the diversity in species they once had.</p>
+          </div>
+        </div>
+        <div class="slide active">
+          <img src="https://www.gannett-cdn.com/-mm-/61010c4fc113a25c4bef268b3a1443bb29d3b31b/c=19-89-4926-2862/local/-/media/2018/04/12/USATODAY/USATODAY/636591334179413866-AFP-AFP-13Y5A3.jpg" alt="">
+          <div class="info">
+            <h2>There are only a few left</h2>
+            <p>Many species have fallen under the endangered and extinct bar in the last decade.</p>
+          </div>
+        </div>
+    -->
+
+
+      <!--   footer   -->
+      <footer class="white">
+        <div class="main-content">
+          <div class="left box">
+            <a href="html/aboutUs.html" class="about-us"><h2>About us</h2></a>
+            <div class="content">
+              <p>We are team Anti-Chupacabra and we were given a task to create a website about our important turtles.</p>
+              <div class="social">
+                <a href="" onclick="notExisting(); return false"><span class="fab fa-facebook-f"></span></a>
+                <a href="" onclick="notExisting(); return false"><span class="fab fa-instagram"></span></a>
+                <a href="" onclick="notExisting(); return false"><span class="fab fa-youtube"></span></a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="center box">
+            <h2>Address</h2>
+            <div class="content">
+              <div class="place">
+                <span class="fas fa-map-marker-alt"></span>
+                <span class="text">Burgas, Bulgaria</span>
+              </div>
+              <div class="phone">
+                <span class="fas fa-phone-alt"></span>
+                <span class="text">+359 XXX XXX XXX</span>
+              </div>
+              <div class="email">
+                <span class="fas fa-envelope"></span>
+                <span class="text">Anti-Chupacabra@gmail.com</span>
+              </div>
+            </div>
+          </div>
+  
+          <div class="right box">
+            <h2>Contact us</h2>
+            <div class="content">
+              <form action="https://formspree.io/f/xqkweznw" method="POST">
+                <div class="email">
+                  <div class="text">Email *</div>
+                  <input type="email" name="email" required>
+                </div>
+                <div class="msg">
+                  <div class="text">Message *</div>
+                  <textarea name="message" required></textarea>
+                </div>
+                <div class="btn">
+                  <button type="submit">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+  
+        <div class="bottom center">
+          <span><i>Created By Anti-Chupacabra</i></span>
+        </div>
+      </footer>
+
+      <div id="top-of-site-pixel-anchor"></div>
+      <script src ="js/main.js"></script>
+
+      <!--Font Awesome CDN BOOTSTRAP-->
+      <script src="https://kit.fontawesome.com/55c91cfd61.js" crossorigin="anonymous"></script>
+      <!--jQuery CDN BOOTSTRAP-->
+      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+      <script>
+        $(document).ready(function() {
+          $('.menu-toggle').click(function() {
+              $('.menu-toggle').toggleClass('active')
+              $('nav').toggleClass('active')
+          })
+      })
+    </script>
+    </body>
+</html>
