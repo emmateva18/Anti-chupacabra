@@ -196,6 +196,15 @@ body.header-not-at-top .dropdown-content {
     background-attachment: fixed;
 }
 
+.background-team {
+  background-image: url("../img/teamBG.jpg");
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .center {
     text-align: center;
 }
@@ -205,18 +214,6 @@ body.header-not-at-top .dropdown-content {
 }
 
 /* --------------------- Footer -----------------------*/
-
-
-.about-us {
-  text-decoration: none;
-  color: var(--text-primary);
-  cursor: pointer;
-  transition: var(--transition-speed);
-}
-
-.about-us:hover {
-  color: var(--element-quaternary);
-}
 
 .content1 {
   position: relative;
@@ -491,7 +488,7 @@ footer {
   
 .right form input:focus,
   .right form textarea:focus {
-    outline-color: var(--element-quaternary);
+    outline-style: none;
 }
   
 .right form input {
@@ -666,3 +663,105 @@ textarea {
       font-size: 0.9em;
     }
   }
+
+  /* -------------------- Team page ---------------------*/
+
+.container {
+  margin: 20px 40px;
+  color: white;
+}
+
+.container-black {
+  margin: 20px 40px;
+  color: #000;
+}
+
+.heading {
+  font-size: 60px;
+  color: white;
+}
+
+.heading span {
+  font-style: italic;
+  font-size: 30px;
+}
+
+.profiles {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 80px;
+}
+
+.profile {
+  flex-basis: 260px;
+  margin-bottom: 4rem;
+}
+
+.profile .profile-img {
+  height: 260px;
+  width: 260px;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  cursor: pointer;
+  transition: var(--transition-speed);
+}
+
+.profile:hover .profile-img {
+  filter: grayscale(0);
+}
+
+.user-name {
+  margin-top: 30px;
+  font-size: 35px;
+}
+
+.profile h5 {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #ccc;
+}
+
+.profile p {
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+@media only screen and (max-width: 1150px) {
+  .profiles {
+    flex-direction: column;
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile p {
+    text-align: center;
+    margin: 20px 60px 80px 60px;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .heading {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+  }
+
+  .heading span {
+    font-size: 15px;
+  }
+
+  .profiles {
+    margin: 20px 0;
+  }
+
+  .profile p {
+    margin: 20px 10px 80px 10px;
+  }
+}
