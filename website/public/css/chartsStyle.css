@@ -37,7 +37,7 @@ body.header-not-at-top header {
 }
 
 .header-color {
-    background-image: url(img.jpg.png);
+    background-image: url(../img/hearderBackground.png);
     background-size: cover;
 }
 
