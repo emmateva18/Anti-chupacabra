@@ -1,0 +1,68 @@
+/* Main CSS File including navs, footers and such 
+   Camel case classes and ids are forbiden!*/
+
+:root { /*CSS variables*/
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    --text-primary: #fff;
+    --text-secondary: #000;
+    --element-primary: #2F3843;
+    --element-secondary: #426E86;
+    --element-tertiary: #F9C34D;
+    --element-quaternary: #fff;
+    --transition-speed: 300ms;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar { /*Pseudo element*/
+    width: 0.25rem;
+}
+  
+body::-webkit-scrollbar-track { /*Pseudo element*/
+    background: #1e1e24;
+}
+  
+body::-webkit-scrollbar-thumb { /*Pseudo element*/
+    background: var(--element-tertiary);
+    border-radius: 25px;
+}
+
+.background-red {
+    background-image: url("../img/teamBG.jpg");
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.center {
+    margin-top: 16rem;
+    text-align: center;
+    position: flex;
+    flex-direction: column;
+}
+
+.btn {
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    border-radius: 25px;
+    margin: 2rem;
+    min-width: 18rem;
+    height: 3.5rem;
+    box-shadow: 25px 24px 48px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(161, 123, 147));
+    transition: var(--transition-speed) all ease;
+}
+
+.btn:hover {
+    min-width: 20rem;
+    height: 4rem;
+    background-color: red;
+    color: var(--element-quaternary);
+}
