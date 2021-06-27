@@ -372,7 +372,7 @@ textarea {
 .slider{
     position: relative;
     background: #000116;
-    width: 800px;
+    width: 1000px;
     min-height: 500px;
     margin: auto;
     overflow: hidden;
@@ -473,8 +473,22 @@ textarea {
   .navigation-visibility .slide-icon.active{
     background: #4285F4;
   }
+
+  @media (min-width: 1500px){
+    .slider{
+      width: 70%;
+      height: 720px;
+    }
   
-  @media (max-width: 900px){
+    .slider .slide .info{
+      position: relative;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media (max-width: 1150px){
     .slider{
       width: 100%;
     }
@@ -599,3 +613,5 @@ textarea {
     margin: 20px 10px 80px 10px;
   }
 }
+
+ /* -------------------- Blog tabs ---------------------*/
