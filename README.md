@@ -1,11 +1,12 @@
-![Tutrle_Logo_Circle_200px](https://user-images.githubusercontent.com/58329141/123556156-47849380-d792-11eb-8c1d-31813e5acf7e.png)
+![Turtle_Logo_Circle_200px](https://user-images.githubusercontent.com/58329141/123556806-160dc700-d796-11eb-84bd-835d834a87a8.png)
 
 # <i> Anti-chupacabra</i>
 ## Table of Contents
+
 1. [Description](#desc)
-2. [Our Team](#team)
+2. [Our team](#team)
 3. [Documentation](#documentation)
-4. [Used Technologies](#technologies)
+4. [Used technologies](#technologies)
 
 <a name="desc"></a>
 ## 1. Description
@@ -16,9 +17,9 @@
 
 
 <a name="team"></a>
-## 2. Our Team
+## 2. Our team
 - :woman_teacher: Ema Mateva (Project Manager)
-- :desktop_computer: Dimitar Kalchev (Frontend Developer)
+- :desktop_computer: Dimitar Kalchev (Backend Developer)
 - :computer: Georgi Dryanovski (Frontend Developer)
 - :computer: Viktor Kirov (Frontend Developer)
 - :computer: Mihail Petrov (Frontend Developer)
@@ -31,7 +32,7 @@
 
 <a name="technologies"></a>
 
-## 4. Used Technologies
+## 4. Used technologies
 * HTML5, CSS3, JavaScript
 * Express and Chart.js
 * SQL and SSMS
