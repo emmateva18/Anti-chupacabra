@@ -8,7 +8,11 @@ var router = express.Router();
 /* GET users listing. */
 router.get('/registration', function(req, res, next) {
     //res.render('team', { user: { name: "Jelyazko", id: 16 } })
-    res.render('turtle-registration')
+    if (req.session.isAdmin == true) {
+        res.render('turtle-registration')
+    } else {
+        res.render('index')
+    }
 });
 
 //  localhost/turtles/register GET => show reg form
@@ -26,8 +30,7 @@ async function insertAnimals(req, res) {
             throw Error("The name cannot be empty!");
         }
 
-        // female = 0, male = 1 
-        let gender = (req.body.male == "on")
+
 
         // SAVE DATA TO SQL
         const pool = await sql.connect(config);
@@ -35,7 +38,8 @@ async function insertAnimals(req, res) {
             //.query(`SELECT TOP 2 * FROM production.products;`) 
 
         .input("Breed", sql.NVarChar, req.body.breed)
-            .input("Sex", sql.Bit, gender)
+            // female = 0, male = 1 
+            .input("Sex", sql.Bit, req.body.turtleGender)
             .input("Age", sql.SmallInt, req.body.age)
             .query(`
                       INSERT INTO Animals (Breed, Sex, Age)

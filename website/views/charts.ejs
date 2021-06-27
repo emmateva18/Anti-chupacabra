@@ -21,38 +21,40 @@
     <style>
         body.header-not-at-top header {
             margin-top: -0.5rem;
-          }
-        </style>
+        }
+    </style>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    </head>
-    <body class="background-red">
-      <div id="jsUsed">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+</head>
+
+<body class="background-red">
+    <div id="jsUsed">
         <header class="header-color">
-          <a href="//localhost:3000/" class="logo">AQUA</a>
-          <div class="menu-toggle"></div>
-          <nav>
-            <ul>
-              <li><a href="//localhost:3000/team">Team</a></li>
-                <div class="dropdown">
-                  <li><a>Language</a></li>
-                  <div class="dropdown-content">
-                    <li><a href="html/reportFire.html">󠁧󠁢󠁥English</a></li>
-                    <li><a href="html/reportBug.html">󠁧󠁢󠁥󠁮󠁧Bulgarian󠁧</a></li>
-                  </div>
-                </div>
-            </ul>
-          </nav>
-          <div class="clearfix"></div>
+            <a href="//localhost:3000/" class="logo">AQUA</a>
+            <div class="menu-toggle"></div>
+            <nav>
+                <ul>
+                    <li><a href="//localhost:3000/team">Team</a></li>
+                    <div class="dropdown">
+                        <li><a>Language</a></li>
+                        <div class="dropdown-content">
+                            <li><a href="html/reportFire.html">󠁧󠁢󠁥English</a></li>
+                            <li><a href="html/reportBug.html">󠁧󠁢󠁥󠁮󠁧Bulgarian󠁧</a></li>
+                        </div>
+                    </div>
+                </ul>
+            </nav>
+            <div class="clearfix"></div>
         </header>
-      </div>
+    </div>
 
-        <div class="container">
-          <div class="profiles">
+    <div class="container">
+        <div class="profiles">
             <div class="profile">
                 <div class="chart background-charts diagram2">
                     <canvas id="bar-chart" width="800" height="450">
                   <script>
+                    <%console.log(chartByDaysData)%>
                   new Chart(document.getElementById("bar-chart"), {
                   type: 'bar',
                   data: {
@@ -60,8 +62,8 @@
                     datasets: [
                       {
                         backgroundColor: ["#426E86", "#1f456e","#63c5da","#48aaad","#0492c2"],
-                        data: [50,75,83,20,6]
-                        //data:[chartByDaysData.data1, chartByDaysData.data2, chartByDaysData.data3, chartByDaysData.data4, chartByDaysData.data]
+                        //data: [50,75,83,20,6]
+                        data:[<%=chartByDaysData['data1']%>, <%=chartByDaysData['data2']%>, <%=chartByDaysData['data3']%>, <%=chartByDaysData['data4']%>, <%=chartByDaysData['data5']%>]
                       }
                     ]
                   },

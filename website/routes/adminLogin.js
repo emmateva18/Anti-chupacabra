@@ -1,6 +1,7 @@
 var express = require('express');
 const { config } = require('../db/config')
 const sql = require('mssql/msnodesqlv8')
+var session = require('express-session')
 var router = express.Router();
 
 
@@ -29,13 +30,14 @@ router.post('/login', async function(req, res, next) {
 
         //console.log(res);
 
-        if (req.body.username == result.recordset[0].Username) {
-            console.log("Username matched")
-        }
+        if (req.body.username == result.recordset[0].Username && passHashed == result.recordset[0].PasswordHash) {
+            req.session.isAdmin = true;
+        } else {
 
-        if (passHashed == result.recordset[0].PasswordHash) {
-            console.log("Password matched")
+            req.session.isAdmin = false;
         }
+        console.log(req.session.isAdmin)
+
 
     } catch (e) {
         console.log(e);

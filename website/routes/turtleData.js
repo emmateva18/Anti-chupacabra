@@ -11,7 +11,11 @@ var router = express.Router();
         console.log(result)
             /* GET users listing. */
         router.get('/data', function(req, res, next) {
-            res.render('turtleData', { data: result.recordset });
+            if (req.session.isAdmin == true) {
+                res.render('turtleData', { data: result.recordset });
+            } else {
+                res.render('index')
+            }
         });
     } catch (err) {
         console.log(err);
