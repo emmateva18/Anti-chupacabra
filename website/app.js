@@ -16,6 +16,7 @@ var chartRouter = require('./routes/charts');
 var turtleUpdateRouter = require('./routes/updateTurtle');
 var turtleDataRouter = require('./routes/turtleData');
 var adminRouter = require('./routes/adminIndex');
+var adminRestricted = require('./routes/adminRestricted');
 var bodyParser = require('body-parser')
 
 var app = express();
@@ -45,6 +46,7 @@ app.use('/charts', chartRouter);
 app.use('/turtles', turtleUpdateRouter);
 app.use('/turtles', turtleDataRouter);
 app.use('/admin', adminRouter);
+app.use('/error', adminRestricted);
 
 
 // catch 404 and forward to error handler

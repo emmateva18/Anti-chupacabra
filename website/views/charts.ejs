@@ -90,8 +90,8 @@
                 labels: ["2017","2018", "2019", "2020", "2021"],
                 datasets: [{
                 type: "line",
-                borderColor: "#F9C34D",
-                data: [225,250,302,275,306],
+                borderColor: "#F9C34D",      
+                data: [<%=chartByYearCountData['data1']%>, <%=chartByYearCountData['data2']%>, <%=chartByYearCountData['data3']%>, <%=chartByYearCountData['data4']%>, <%=chartByYearCountData['data5']%>],
                 fill: true
                 }]
                 // Block chart elements can be added
@@ -121,8 +121,8 @@
                         data: {
                           labels: ["Male","Female"],
                           datasets: [{
-                            backgroundColor: ["#426E86", "#F9C34D"],
-                            data: [621,479] //countMale, countFemale
+                            backgroundColor: ["#426E86", "#F9C34D"],                            
+                            data: [<%=chartByGenderData['data1']%>, <%=chartByGenderData['data2']%>] //countMale, countFemale
                           }]
                         
                         },
@@ -148,8 +148,8 @@
                             labels: ["Sofia", "Plovdiv", "Varna", "Burgas", "Ruse"],
                             datasets: [
                               {
-                                backgroundColor: ["#426E86", "#1f456e","#63c5da","#48aaad","#0492c2"],
-                                data: [202,150,170,195,165]// Sofia, Plovdiv, Varna, Burgas, Ruse
+                                backgroundColor: ["#426E86", "#1f456e","#63c5da","#48aaad","#0492c2"],                                
+                                data: [<%=charByTopCities['data1']%>, <%=charByTopCities['data2']%>, <%=charByTopCities['data3']%>, <%=charByTopCities['data4']%>, <%=charByTopCities['data5']%>]// Sofia, Plovdiv, Varna, Burgas, Ruse
                               }
                             ]
                           },

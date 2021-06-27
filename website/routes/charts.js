@@ -13,22 +13,22 @@ router.get('/', function(req, res, next) {
             data5: 5
         },
         chartByYearCountData: {
-            data1: 0,
-            data2: 0,
-            data3: 0,
-            data4: 0,
-            data5: 0
+            data1: 1,
+            data2: 2,
+            data3: 5,
+            data4: 3,
+            data5: 6
         },
         chartByGenderData: {
-            data1: 0,
-            data2: 0
+            data1: 10,
+            data2: 13
         },
         charByTopCities: {
-            data1: 0,
-            data2: 0,
-            data3: 0,
-            data4: 0,
-            data5: 0
+            data1: 1,
+            data2: 4,
+            data3: 5,
+            data4: 2,
+            data5: 6
         }
     });
 });
