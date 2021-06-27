@@ -106,9 +106,22 @@ async function insertRecord(req, res) {
         }
         // SAVE DATA TO SQL
         const pool = await sql.connect(config);
+
+        const topAnimalId = await pool.request()
+
+
+        .query(`SELECT TOP 1 [Id] FROM Animals
+
+        ORDER BY Id DESC`)
+
+        let animalId = req.body.id;
+
+        if (req.body.id == undefined) {
+            animalId = topAnimalId.recordset[0].Id;
+        }
         const result = await pool.request()
             //.query(`SELECT TOP 2 * FROM production.products;`) 
-            .input("AnimalId", sql.Int, req.body.id)
+            .input("AnimalId", sql.Int, animalId)
             .input("AcceptedOn", sql.Date, req.body.acceptedDate)
             .input("DonatorName", sql.NVarChar, req.body.donatorName)
             .input("DonatorPhone", sql.NVarChar, req.body.donatorPhone)
@@ -136,10 +149,15 @@ async function insertRecord(req, res) {
 
 router.post('/registration', async function(req, res, next) {
 
-    console.log(req.body)
-        //insertAnimals(req, res)
+    //console.log(req.body)
+
+    if (req.body.isTurteRegistered == "on") {
+        updateAnimals(req, res)
+    } else {
+        insertAnimals(req, res)
+    }
+
     insertRecord(req, res)
-    updateAnimals(req, res)
 
     res.redirect("/turtles/registration");
 });
