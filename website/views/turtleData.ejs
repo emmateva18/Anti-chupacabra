@@ -7,73 +7,76 @@
 </head>
 
 <body>
-    <table class="content-table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Breed</th>
-                <th>Sex</th>
-                <th>Age</th>
-                <th>AcceptedOn</th>
-                <th>Town</th>
-                <th>Place</th>
-                <th>DonatorName</th>
-                <th>DonatorPhone</th>
-                <th>ReleasedOn</th>
-                <th>isInjured</th>
-                <th>InjurySeverity</th>
-                <th>Duration</th>
-            </tr>
-        </thead>
-        <tbody>
+    <div class="center">
 
-            <%for(let i = 0; i < data.length; i++){ %>
+        <table class="content-table">
+            <thead>
                 <tr>
-
-                    <td>
-                        <%=data[i].Id%>
-                    </td>
-                    <td>
-                        <%=data[i].Breed%>
-                    </td>
-                    <td>
-                        <%=data[i].Sex%>
-                    </td>
-                    <td>
-                        <%=data[i].Age%>
-                    </td>
-                    <td>
-                        <%=data[i].AcceptedOn.toISOString().split('T')[0]%>
-                    </td>
-                    <td>
-                        <%=data[i].Town%>
-                    </td>
-                    <td>
-                        <%=data[i].Place%>
-                    </td>
-                    <td>
-                        <%=data[i].DonatorName%>
-                    </td>
-                    <td>
-                        <%=data[i].DonatorPhone%>
-                    </td>
-                    <td>
-                        <%=data[i].ReleasedOn%>
-                    </td>
-                    <td>
-                        <%=data[i].isInjured%>
-                    </td>
-                    <td>
-                        <%=data[i].InjurySeverity%>
-                    </td>
-                    <td>
-                        <%=data[i].Duration%>
-                    </td>
+                    <th>Id</th>
+                    <th>Breed</th>
+                    <th>Sex</th>
+                    <th>Age</th>
+                    <th>AcceptedOn</th>
+                    <th>Town</th>
+                    <th>Place</th>
+                    <th>DonatorName</th>
+                    <th>DonatorPhone</th>
+                    <th>ReleasedOn</th>
+                    <th>isInjured</th>
+                    <th>InjurySeverity</th>
+                    <th>Duration</th>
                 </tr>
-                <%}%>
-        </tbody>
+            </thead>
+            <tbody>
 
-    </table>
+                <%for(let i = 0; i < data.length; i++){ %>
+                    <tr>
+
+                        <td>
+                            <%=data[i].Id%>
+                        </td>
+                        <td>
+                            <%=data[i].Breed%>
+                        </td>
+                        <td>
+                            <%=data[i].Sex%>
+                        </td>
+                        <td>
+                            <%=data[i].Age%>
+                        </td>
+                        <td>
+                            <%=data[i].AcceptedOn.toISOString().split('T')[0]%>
+                        </td>
+                        <td>
+                            <%=data[i].Town%>
+                        </td>
+                        <td>
+                            <%=data[i].Place%>
+                        </td>
+                        <td>
+                            <%=data[i].DonatorName%>
+                        </td>
+                        <td>
+                            <%=data[i].DonatorPhone%>
+                        </td>
+                        <td>
+                            <%=data[i].ReleasedOn%>
+                        </td>
+                        <td>
+                            <%=data[i].isInjured%>
+                        </td>
+                        <td>
+                            <%=data[i].InjurySeverity%>
+                        </td>
+                        <td>
+                            <%=data[i].Duration%>
+                        </td>
+                    </tr>
+                    <%}%>
+            </tbody>
+
+        </table>
+    </div>
 </body>
 
 </html>
