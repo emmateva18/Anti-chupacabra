@@ -44,7 +44,7 @@ app.use('/admin', adminLogin);
 app.use('/charts', chartRouter);
 app.use('/turtles', turtleUpdateRouter);
 app.use('/turtles', turtleDataRouter);
-
+app.use('/admin', adminRouter);
 
 
 // catch 404 and forward to error handler
