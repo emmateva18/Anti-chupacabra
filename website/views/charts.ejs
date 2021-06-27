@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Document</title>
-    <link rel = "Stylesheet" type = "text/css" href = "../css/chartsStyle.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
-</head>
-    <body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/chartsStyle.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="img/tutrleLogoCircle.png">
+        
+        <title>AQUA</title>
+
+        <style>
+          body.header-not-at-top header {
+            margin-top: -0.5rem;
+          }
+        </style>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    </head>
+    <body class="background-red">
         <header class="header-color">
             <a href="#" class="logo">AQUA</a>
             <div class="menu-toggle"></div>
-            <div id = "img-background">
-                <nav>
-                <ul>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Register A Turtle</a></li>
-                    <li><a href="#">Location</a></li>
-                    <div class="dropdown">
-                        <li><a>Report</a></li>
-                        <div class="dropdown-content">
-                        <li><a href="#">Report a fire</a></li>
-                        <li><a href="#">Report a bug</a></li>
-                        </div>
+            <nav>
+              <ul>
+                <li><a href="//localhost:3000/team">Team</a></li>
+                <li><a href="turtle-registration.ejs">Register A Turtle</a></li>
+                <li><a href="html/location.html">Location</a></li>
+                  <div class="dropdown">
+                    <li><a>Report</a></li>
+                    <div class="dropdown-content">
+                      <li><a href="html/reportFire.html">Report a fire</a></li>
+                      <li><a href="html/reportBug.html">Report a bug</a></li>
                     </div>
-                </ul>
-                </nav>
-            </div>
+                  </div>
+              </ul>
+            </nav>
             <div class="clearfix"></div>
         </header>
-        <div>
-            <img class = "Chart-icon1" src="../img/iconChart1.png" width = "172px" height = "172px">
-            <img class = "Chart-container1" src="../img/backChart1.png" height = "619px" width = "1499px" >
-            <img class = "Chart-Filler1" src = "../img/chartFillerRight.png" height = "563px" width = "1439px">
-            <div class = "Chart1">
+
+        <div class="container">
+          <div class="profiles">
+            <div class="profile">
+              <div class="chart background-charts diagram2">
                 <canvas id="bar-chart" width="800" height="450">
                   <script>
                   new Chart(document.getElementById("bar-chart"), {
@@ -57,12 +74,8 @@
                   </script>
                 </canvas>
               </div>
-        </div>
 
-        <div>
-            <img class = "Chart-container2" src="../img/backChart2.png" height = "619px" width = "1499px" >
-            <img class = "Chart-Filler2" src = "../img/chartFillerLeft.png" height = "563px" width = "1439px">
-            <div class = "Chart2">
+              <div class="chart background-charts diagram2">
                 <canvas id="mixed-chart" width="400" height="150">
                 <script>
                 new Chart(document.getElementById("mixed-chart"), {
@@ -88,15 +101,13 @@
                 });
                 </script>
                 </canvas>
+              </div>
             </div>
-            <img class = "Chart-icon2" src="../img/iconChart2.png" width = "172px" height = "172px">
-        </div>
+            
+            <div class="profile">
+              
 
-        <div>
-            <img class = "Chart-icon3" src="../img/iconChart3.png" width = "172px" height = "172px">
-            <img class = "Chart-container3" src="../img/backChart3.png" height = "619px" width = "1499px" >
-            <img class = "Chart-Filler3" src = "../img/chartFillerRight.png" height = "563px" width = "1439px">
-            <div class = "Chart3">
+              <div class="chart background-charts diagram">
                 <canvas id="pie-chart" width="200" height="200">
                     <script>
                     new Chart(document.getElementById("pie-chart"), {
@@ -122,36 +133,50 @@
                     </script>
                     </canvas>
               </div>
-        </div>
-        
-        <div>
-            <img class = "Chart-container4" src="../img/backChart4.png" height = "619px" width = "1499px" >
-            <img class = "Chart-Filler4" src = "../img/chartFillerLeft.png" height = "563px" width = "1439px">
-            <div class = "Chart4">
-                <canvas id="polar-chart" width="800" height="450">
-                    <script>new Chart(document.getElementById("polar-chart"), {
-                        type: 'polarArea',
-                        data: {
-                          labels: ["Sofia", "Plovdiv", "Varna", "Burgas", "Ruse"],
-                          datasets: [
-                            {
-                              backgroundColor: ["#426E86", "#1f456e","#63c5da","#48aaad","#0492c2"],
-                              data: [202,150,170,195,165]// Sofia, Plovdiv, Varna, Burgas, Ruse
+
+                <div class="chart background-charts diagram">
+                  <canvas id="polar-chart" width="800" height="450">
+                      <script>new Chart(document.getElementById("polar-chart"), {
+                          type: 'polarArea',
+                          data: {
+                            labels: ["Sofia", "Plovdiv", "Varna", "Burgas", "Ruse"],
+                            datasets: [
+                              {
+                                backgroundColor: ["#426E86", "#1f456e","#63c5da","#48aaad","#0492c2"],
+                                data: [202,150,170,195,165]// Sofia, Plovdiv, Varna, Burgas, Ruse
+                              }
+                            ]
+                          },
+                          options: {
+                              plugins: {
+                            title: {
+                              display: true,
+                              text: 'Number of turtles from the 5 largest cities in Bulgaria'
                             }
-                          ]
-                        },
-                        options: {
-                            plugins: {
-                          title: {
-                            display: true,
-                            text: 'Number of turtles from the 5 largest cities in Bulgaria'
-                          }
-                        }}
-                    });
-                    </script>
-                    </canvas>
+                          }}
+                      });
+                      </script>
+                      </canvas>
+                </div>
+              </div>
             </div>
-            <img class = "Chart-icon4" src="../img/iconChart4.png" width = "172px" height = "172px">
+          </div>
         </div>
+
+        <div id="top-of-site-pixel-anchor"></div>
+        <script src ="../js/main.js"></script>
+  
+        <!--Font Awesome CDN BOOTSTRAP-->
+        <script src="https://kit.fontawesome.com/55c91cfd61.js" crossorigin="anonymous"></script>
+        <!--jQuery CDN BOOTSTRAP-->
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script>
+          $(document).ready(function() {
+            $('.menu-toggle').click(function() {
+                $('.menu-toggle').toggleClass('active')
+                $('nav').toggleClass('active')
+            })
+        })
+      </script>
     </body>
 </html>
