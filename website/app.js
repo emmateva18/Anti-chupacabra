@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 var teamRouter = require('./routes/team');
 var turtleRegistrationRouter = require('./routes/turtleRegistration');
 var adminLogin = require('./routes/adminLogin');
+var chartRouter = require('./routes/charts');
 var bodyParser = require('body-parser')
 
 var app = express();
@@ -28,6 +29,7 @@ app.use('/users', usersRouter);
 app.use('/team', teamRouter);
 app.use('/turtles', turtleRegistrationRouter);
 app.use('/admin', adminLogin);
+app.use('/charts', chartRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
