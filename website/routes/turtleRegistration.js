@@ -18,7 +18,7 @@ function displayError(res, message) {
     res.render('turtle-registration', { error: message })
 }
 
-async function insertAnimals(req) {
+async function insertAnimals(req, res) {
 
     try {
 
@@ -55,6 +55,43 @@ async function insertAnimals(req) {
     }
 }
 
+async function updateAnimals(req, res) {
+
+    try {
+
+        if (typeof req.body.breed !== "undefined" && req.body.breed === "") {
+            throw Error("The name cannot be empty!");
+        }
+
+        // female = 0, male = 1 
+        let gender = (req.body.male == "on")
+
+        // SAVE DATA TO SQL
+        const pool = await sql.connect(config);
+        const result = await pool.request()
+            //.query(`SELECT TOP 2 * FROM production.products;`) 
+
+        .input("Id", sql.Int, req.body.id)
+            .input("Age", sql.SmallInt, req.body.age)
+            .query(`
+            UPDATE Animals
+            SET Age = @Age
+            WHERE Id = @Id
+                  `)
+            //.query(`EXEC Tutorial.dbo.CreateUser N'User1' N'Pass123'`)
+        console.log(result)
+
+    } catch (e) {
+        console.log(e);
+
+        if (e instanceof sql.RequestError) {
+            return displayError(res, "A database error has occured! Please try again later.");
+        } else {
+            return displayError(res, e.message);
+        }
+    }
+}
+
 async function insertRecord(req, res) {
     try {
 
@@ -62,7 +99,7 @@ async function insertRecord(req, res) {
             throw Error("The name cannot be empty!");
         }
 
-        let isInjured = (req.body.isInjured == "on")
+        let Injured = (req.body.isInjured == "on")
         let severity = null;
         if (req.body.Severity != "undefined") {
             severity = req.body.Severity;
@@ -75,12 +112,12 @@ async function insertRecord(req, res) {
             .input("AcceptedOn", sql.Date, req.body.acceptedDate)
             .input("DonatorName", sql.NVarChar, req.body.donatorName)
             .input("DonatorPhone", sql.NVarChar, req.body.donatorPhone)
-            .input("Town", sql.SmallInt, req.body.Town)
-            .input("Place", sql.SmallInt, req.body.Place)
-            .input("IsInjured", sql.SmallInt, isInjured)
+            .input("Town", sql.NVarChar, req.body.Town)
+            .input("Place", sql.NVarChar, req.body.Place)
+            .input("IsInjured", sql.Bit, Injured)
             .input("InjurySeverity", sql.SmallInt, req.body.Severity)
             .query(`
-                      INSERT INTO Animals (AnimalId, AcceptedOn, DonatorName, DonatorPhone, Town, Place, IsInjured, InjurySeverity)
+                      INSERT INTO AnimalRecords (AnimalId, AcceptedOn, DonatorName, DonatorPhone, Town, Place, IsInjured, InjurySeverity)
                       VALUES (@AnimalId, @AcceptedOn, @DonatorName, @DonatorPhone, @Town, @Place, @IsInjured, @InjurySeverity)
                   `)
             //.query(`EXEC Tutorial.dbo.CreateUser N'User1' N'Pass123'`)
@@ -100,8 +137,9 @@ async function insertRecord(req, res) {
 router.post('/registration', async function(req, res, next) {
 
     console.log(req.body)
-        //insertAnimals(req)
-        //insertRecord(req, res)
+        //insertAnimals(req, res)
+    insertRecord(req, res)
+    updateAnimals(req, res)
 
     res.redirect("/turtles/registration");
 });
