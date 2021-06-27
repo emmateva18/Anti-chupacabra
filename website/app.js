@@ -15,6 +15,7 @@ var adminLogin = require('./routes/adminLogin');
 var chartRouter = require('./routes/charts');
 var turtleUpdateRouter = require('./routes/updateTurtle');
 var turtleDataRouter = require('./routes/turtleData');
+var adminRouter = require('./routes/adminIndex');
 var bodyParser = require('body-parser')
 
 var app = express();

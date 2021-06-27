@@ -372,7 +372,7 @@ textarea {
 .slider{
     position: relative;
     background: #000116;
-    width: 1000px;
+    width: 800px;
     min-height: 500px;
     margin: auto;
     overflow: hidden;
@@ -417,7 +417,7 @@ textarea {
   }
   
   .slider .slide .info p{
-    font-size: 1.4em;
+    font-size: 1em;
     font-weight: 400;
   }
   
@@ -476,8 +476,8 @@ textarea {
 
   @media (min-width: 1500px){
     .slider{
-      width: 70%;
-      height: 720px;
+      width: 65%;
+      height: 560px;
     }
   
     .slider .slide .info{
@@ -615,3 +615,42 @@ textarea {
 }
 
  /* -------------------- Blog tabs ---------------------*/
+
+ .main{
+  width: 70%;  
+  height: 400px;  
+  margin: 100px auto;  
+  position: relative;  
+}  
+.main li{
+  display: inline-block;  
+}  
+.content{ 
+  border-radius: 25px; 
+  background-color: var(--element-secondary);
+  color: #fff;  
+  position: absolute;  
+  left: 0;  
+  display: none;  
+  padding: 30px;  
+  top: 35px;  
+}  
+.content>p{  
+  font-size: 1em;  
+  font-weight: 300;  
+  margin: 10px;  
+}  
+.main [id^="label"]:checked~.content{  
+  display: block;  
+}  
+.main input[type="radio"]{  
+  display: none;  
+}  
+.main label{  
+  padding: 20px 30px;  
+}  
+.main [id^="label"]:checked + label{ 
+  border-radius: 25px;
+  background-color: var(--element-secondary);
+  color: #fff;  
+}  
