@@ -60,10 +60,10 @@
                             <%=data[i].DonatorPhone%>
                         </td>
                         <td>
-                            <%=data[i].ReleasedOn%>
+                            <%=data[i].ReleasedOn.toISOString().split('T')[0]%>
                         </td>
                         <td>
-                            <%=data[i].isInjured%>
+                            <%=data[i].IsInjured%>
                         </td>
                         <td>
                             <%=data[i].InjurySeverity%>

@@ -114,20 +114,20 @@ async function getchartByDaysDataData() {
             //console.log(result.recordsets[0][0].Duration)
 
         for (let i = 0; i < result.recordset.length; i++) {
-            if (result.recordsets[i][0].Duration >= 1 && result.recordsets[i][0].Duration <= 5) {
+            if (result.recordsets[0][i].Duration >= 1 && result.recordsets[0][i].Duration <= 5) {
                 data1++;
-            } else if (result.recordsets[i][0].Duration >= 6 && result.recordsets[i][0].Duration <= 10) {
+            } else if (result.recordsets[0][i].Duration >= 6 && result.recordsets[0][i].Duration <= 10) {
                 data2++;
-            } else if (result.recordsets[i][0].Duration >= 11 && result.recordsets[i][0].Duration <= 20) {
+            } else if (result.recordsets[0][i].Duration >= 11 && result.recordsets[0][i].Duration <= 20) {
                 data3++;
-            } else if (result.recordsets[i][0].Duration >= 21 && result.recordsets[i][0].Duration <= 50) {
+            } else if (result.recordsets[0][i].Duration >= 21 && result.recordsets[0][i].Duration <= 50) {
                 data4++;
-            } else if (result.recordsets[i][0].Duration >= 51) {
+            } else if (result.recordsets[0][i].Duration >= 51) {
                 data5++;
             }
             //console.log(data1, data2, data3, data4, data5)
-            return [data1, data2, data3, data4, data5];
         }
+        return [data1, data2, data3, data4, data5];
 
     } catch (e) {
         console.log(e);

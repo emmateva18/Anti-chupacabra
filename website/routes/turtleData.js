@@ -14,7 +14,7 @@ var router = express.Router();
             if (req.session.isAdmin == true) {
                 res.render('turtleData', { data: result.recordset });
             } else {
-                res.render('index')
+                res.render('adminRestricted')
             }
         });
     } catch (err) {

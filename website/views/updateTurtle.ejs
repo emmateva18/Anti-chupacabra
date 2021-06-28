@@ -34,33 +34,33 @@
     <div class="container">
         <h4 class="mb-3">Turtle data</h4>
 
-                <form method="POST" action="/turtles/registration">
-                    <div class="row g-3">
-                        <div class="col-sm-12">
+        <form method="POST" action="/turtles/update">
+            <div class="row g-3">
+                <div class="col-sm-12">
 
-                            <div class="col-12">
+                    <div class="col-12">
 
-                                <div class="input-group">
-                                    <span class="input-group-text">ID</span>
-                                    <input name="id" id="username" type="text" value=2 class="form-control" placeholder="1" required>
-                                </div>
-                                <div class="invalid-feedback">
-                                    Valid ID is required.
-                                </div>
-                            </div>
-                            <hr class="my-4">
+                        <div class="input-group">
+                            <span class="input-group-text">ID</span>
+                            <input name="id" id="username" type="text" value=2 class="form-control" placeholder="1" required>
                         </div>
-
-                        <div class="col-sm-12">
-                            <label for="Gender" class="form-label">Date of Release</label>
-                            <input id="datepicker" name="acceptedDate" value="2020-01-13" width="1110" />
+                        <div class="invalid-feedback">
+                            Valid ID is required.
                         </div>
-
-                        <button class="btn btn-primary btn-lg btn-block">Submit</button>
-
                     </div>
+                    <hr class="my-4">
+                </div>
 
-                </form>
+                <div class="col-sm-12">
+                    <label for="Gender" class="form-label">Date of Release</label>
+                    <input id="datepicker" name="releaseDate" value="2020-01-13" width="1110" />
+                </div>
+
+                <button class="btn btn-primary btn-lg btn-block">Submit</button>
+
+            </div>
+
+        </form>
     </div>
 
     <script>

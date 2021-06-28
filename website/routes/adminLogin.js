@@ -49,6 +49,6 @@ router.post('/login', async function(req, res, next) {
         }
     }
 
-    res.redirect("/admin/login");
+    res.render("adminIndex");
 });
 module.exports = router;

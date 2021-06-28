@@ -11,7 +11,7 @@ router.get('/registration', function(req, res, next) {
     if (req.session.isAdmin == true) {
         res.render('turtle-registration')
     } else {
-        res.render('index')
+        res.render('adminRestricted')
     }
 });
 
