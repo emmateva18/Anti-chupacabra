@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>responsive blog post</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*,
+*::before,
+*::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	}
+	
+html{
+	font-family: 'Roboto', sans-serif;
+	font-size: 10px;
+}
+
+img{
+	width:100%;
+}
+
+body{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #eee;
+	padding: 0 1.5rem;
+}
+
+.blog-post{
+	width: 100%;
+	max-width: 98rem;
+	padding: 5rem;
+	background-color: #fff;
+	box-shadow: 0 1.4rem 8rem rgba(0,0,0,.2);
+	display: flex;
+	align-items: center;
+	border-radius: .8rem;
+}
+
+.blog-post_img{
+	min-width: 35rem;
+	max-width: 35rem;
+	height: 30rem;
+	transform: translateX(-8rem);
+	position: relative;
+}
+
+.blog-post_img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	border-radius: .8rem;
+}
+
+.blog-post_img::before{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: linear-gradient(to right, rgba(79, 172, 254, .8),
+                                          rgba(0, 242, 254, .8));
+	box-shadow: .5rem .5rem 3rem 1px rgba(0,0,0,.05);
+	border-radius: .8rem;
+}
+
+.blog-post_date span{
+	display: block;
+	color: rgba(0,0,0,.5);
+	font-size: 1.6rem;
+	font-weight: 600;
+	margin: .5rem 0;
+}
+
+.blog-post_title{
+	font-size: 2.5rem;
+	margin: 1.5rem 0 2rem;
+	text-transform: uppercase;
+	color: #4facfe;
+}
+
+.blog-post_text{
+	margin-bottom: 3rem;
+	font-size: 1.4rem;
+	color: rgba(0,0,0,.7);
+}
+
+.blog-post_cta{
+	display: inline-block;
+	padding: 1.5rem 3rem;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	color: fff;
+	background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+	border-radius: .8rem;
+	text-decoration: none;
+}
+
+.blog-post_cta:hover{
+	background-image: linear-gradient(to right, #00f2fe 0%, #4facfe 100%);
+}
+
+@media screen and (max-width: 1068px) {
+	.blog-post{
+		max-width: 80rem;
+	}
+	
+	.blog-post_img{
+		min-width: 30rem;
+		max-width: 30rem;
+	}
+}
+
+@media screen and (max-width: 868px) {
+	.blog-post{
+		max-width: 70rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.blog-post{
+		padding: 2.5rem;
+		flex-direction: column;
+	}
+	
+	.blog-post_img{
+		min-width: 100%;
+		max-width: 100%;
+		transform: translate(0, -8rem);
+	}
+}
+</style>
+
+</head>
+
+</body>
+	<div class="blog-post">
+		<div class="blog-post_img">
+			<img src="https://img.freepik.com/free-vector/gradient-code-logo_23-2148812989.jpg?size=338&ext=jpg">
+		</div>
+		<div class="blog-post_info">
+			<div class="blog-post_date">
+				<span>Monday</span>
+				<span>June 28 2021</span>
+			</div>
+			<h1 class="blog-post_title">Title</h1>
+			<p class="blog-post_text">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis nisl id tincidunt luctus. Quisque in eros nec metus 
+			volutpat vulputate nec non massa. Cras lacinia accumsan elit et egestas. Fusce sit amet dolor a sapien tincidunt lobortis vitae sit amet lacus. 
+			</p>
+			<a href="#" class="blog-post_cta">Read more</a>
+		<div>
+	</div>
+<body>
+</html>
