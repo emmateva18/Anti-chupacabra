@@ -625,7 +625,7 @@ textarea {
 .main li{
   display: inline-block;  
 }  
-.content{ 
+.content-blog{ 
   border-radius: 50px; 
   background-color: var(--element-secondary);
   color: var(--element-quaternary);  
@@ -635,27 +635,28 @@ textarea {
   padding: 30px;  
   top: 35px; 
 }  
-.content>p{  
+.content-blog>p{  
   font-size: 1em;  
   font-weight: 300;  
   margin: 10px; 
 }  
-.main [id^="label"]:checked~.content{  
+.main [id^="label"]:checked~.content-blog{  
   display: block;  
 }  
 .main input[type="radio"]{  
   display: none;
 }  
-.main label{  
+.main label{
   padding: 20px 30px;
   border-radius: 25px;
   background-color: rgba(0, 0, 0, 0.5);
-  color: var(--element-quaternary);  
+  color: var(--element-quaternary);
 }  
 .main [id^="label"]:checked + label{ 
   border-radius: 25px;
   background-color: var(--element-secondary);
-  color: var(--element-quaternary);  
+  color: var(--element-quaternary);
+  transition: var(--transition-speed);
 }
 
 .img {
