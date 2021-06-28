@@ -36,7 +36,7 @@ router.post('/login', async function(req, res, next) {
 
             req.session.isAdmin = false;
         }
-        console.log(req.session.isAdmin)
+        //console.log(req.session.isAdmin)
 
 
     } catch (e) {

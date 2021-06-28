@@ -8,8 +8,8 @@ var router = express.Router();
     try {
         let connection = await sql.connect(config);
         const result = await connection.request().query('SELECT * FROM vAnimalRecords');
-        console.log(result)
-            /* GET users listing. */
+        //console.log(result)
+        /* GET users listing. */
         router.get('/data', function(req, res, next) {
             if (req.session.isAdmin == true) {
                 res.render('turtleData', { data: result.recordset });

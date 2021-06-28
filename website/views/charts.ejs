@@ -54,8 +54,7 @@
             <div class="profile">
                 <div class="chart background-charts diagram2">
                     <canvas id="bar-chart" width="800" height="450">
-                  <script>
-                    <%console.log(chartByDaysData)%>
+                  <script>                    
                   new Chart(document.getElementById("bar-chart"), {
                   type: 'bar',
                   data: {
@@ -63,8 +62,8 @@
                     datasets: [
                       {
                         backgroundColor: ["#426E86", "#1f456e","#63c5da","#48aaad","#0492c2"],
-                        //data: [50,75,83,20,6]
-                        data:[<%=chartByDaysData['data1']%>, <%=chartByDaysData['data2']%>, <%=chartByDaysData['data3']%>, <%=chartByDaysData['data4']%>, <%=chartByDaysData['data5']%>]
+                        //data: [50,75,83,20,6]                       
+                        data:[<%=chartByDaysData[0]%>, <%=chartByDaysData[1]%>, <%=chartByDaysData[2]%>, <%=chartByDaysData[3]%>, <%=chartByDaysData[4]%>]
                       }
                     ]
                   },
@@ -91,7 +90,7 @@
                 datasets: [{
                 type: "line",
                 borderColor: "#F9C34D",      
-                data: [<%=chartByYearCountData['data1']%>, <%=chartByYearCountData['data2']%>, <%=chartByYearCountData['data3']%>, <%=chartByYearCountData['data4']%>, <%=chartByYearCountData['data5']%>],
+                data: [0,0,0,0,0],
                 fill: true
                 }]
                 // Block chart elements can be added
@@ -122,7 +121,7 @@
                           labels: ["Male","Female"],
                           datasets: [{
                             backgroundColor: ["#426E86", "#F9C34D"],                            
-                            data: [<%=chartByGenderData['data1']%>, <%=chartByGenderData['data2']%>] //countMale, countFemale
+                            data: [<%=chartByGenderData[0]%>, <%=chartByGenderData[1]%>] //countMale, countFemale
                           }]
                         
                         },
