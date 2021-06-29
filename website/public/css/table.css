@@ -9,6 +9,9 @@
     display: flex;
 }
 
+.btn-center {
+    text-align: center;
+}
 .content-table {
     border-collapse: collapse;
     margin: 25px 0;
