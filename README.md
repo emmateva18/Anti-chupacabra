@@ -48,8 +48,10 @@
 * Sorting system for turtles data
 * User system for the donators
 * Bigger information part for the end user
-* Dynamic translation
-* Deviding the repeating parts of the code in partials
 * Automatically generated QR codes that contain a given turtles' data
+
+### <i> Already done: </i> 
+* Dynamic translation
+* Dividing the repeating parts of the code in partials
 
 ![logo1-removebg-preview](https://user-images.githubusercontent.com/58329141/123147146-5ce28080-d467-11eb-8708-64223864fd72.png)
