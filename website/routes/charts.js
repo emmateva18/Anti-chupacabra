@@ -14,13 +14,7 @@ router.get('/', function(req, res, next) {
             chartByDaysData: await getchartByDaysDataData(),
             chartByYearCountData: await getchartByYearCountDataData(),
             chartByGenderData: await getchartByGenderDataData(),
-            charByTopCities: {
-                data1: 1,
-                data2: 4,
-                data3: 5,
-                data4: 2,
-                data5: 6
-            }
+            charByTopCities: await getchartByTownDataData()
         });
     }
 
@@ -45,7 +39,7 @@ async function getchartByGenderDataData() {
             .query(`
         SELECT [Sex] FROM Animals WHERE [Sex] = 'false'
     `)
-        console.log(resultMale.recordset.length, resultFemale.recordset.length)
+        // console.log(resultMale.recordset.length, resultFemale.recordset.length)
         return [resultMale.recordset.length, resultFemale.recordset.length]
 
 
@@ -59,7 +53,6 @@ async function getchartByGenderDataData() {
         }
     }
 }
-
 
 
 async function getchartByYearCountDataData() {
@@ -76,12 +69,28 @@ async function getchartByYearCountDataData() {
         const result = await pool.request()
             //.query(`SELECT TOP 2 * FROM production.products;`) 
             .query(`
-        SELECT [Duration] FROM AnimalRecords WHERE [Duration] is not NULL
+        SELECT [AcceptedOn] FROM AnimalRecords WHERE [AcceptedOn] is not NULL
         `)
             //.query(`EXEC Tutorial.dbo.CreateUser N'User1' N'Pass123'`)
             //console.log(result.recordsets[0][0].Duration)
-
-
+        
+        for (let i = 0; i < result.recordset.length; i++) {
+            temp = result.recordsets[0][i].AcceptedOn.toISOString().split('-')[0]
+            if (temp == 2017) {
+                data1++;
+            } else if (temp == 2018) {
+                data2++;
+            } else if (temp == 2019) {
+                data3++;
+            } else if (temp == 2020) {
+                data4++;
+            } else if (temp == 2021) {
+                data5++;
+            }
+            
+            // console.log(data1, data2, data3, data4, data5)
+        }
+        return [data1, data2, data3, data4, data5];
 
     } catch (e) {
         console.log(e);
@@ -140,6 +149,50 @@ async function getchartByDaysDataData() {
     }
 }
 
+async function getchartByTownDataData() {
+    try {
 
+        // SAVE DATA TO SQL
+
+        let data1 = 0,
+            data2 = 0,
+            data3 = 0,
+            data4 = 0,
+            data5 = 0;
+        const pool = await sql.connect(config);
+        const result = await pool.request()
+            //.query(`SELECT TOP 2 * FROM production.products;`) 
+            .query(`
+        SELECT [Town] FROM AnimalRecords WHERE [Town] is not NULL
+        `)
+            //.query(`EXEC Tutorial.dbo.CreateUser N'User1' N'Pass123'`)
+            //console.log(result.recordsets[0][0].Duration)
+        
+        for (let i = 0; i < result.recordset.length; i++) {
+            if (result.recordsets[0][i].Town == 'Sofia') {
+                data1++;
+            } else if (result.recordsets[0][i].Town == 'Plovdiv') {
+                data2++;
+            } else if (result.recordsets[0][i].Town == 'Varna') {
+                data3++;
+            } else if (result.recordsets[0][i].Town == 'Burgas') {
+                data4++;
+            } else if (result.recordsets[0][i].Town == 'Ruse') {
+                data5++;
+            }
+            // console.log(data1, data2, data3, data4, data5)
+        }
+        return [data1, data2, data3, data4, data5];
+
+    } catch (e) {
+        console.log(e);
+
+        if (e instanceof sql.RequestError) {
+            return displayError(res, "A database error has occured! Please try again later.");
+        } else {
+            return displayError(res, e.message);
+        }
+    }
+}
 
 module.exports = router;

@@ -91,7 +91,7 @@
                 datasets: [{
                 type: "line",
                 borderColor: "#F9C34D",      
-                data: [3,2,4,5,7],
+                data: [<%=chartByYearCountData[0]%>, <%=chartByYearCountData[1]%>, <%=chartByYearCountData[2]%>, <%=chartByYearCountData[3]%>, <%=chartByYearCountData[4]%>],
                 fill: true
                 }]
                 // Block chart elements can be added
@@ -149,7 +149,7 @@
                             datasets: [
                               {
                                 backgroundColor: ["#426E86", "#1f456e","#63c5da","#48aaad","#0492c2"],                                
-                                data: [<%=charByTopCities['data1']%>, <%=charByTopCities['data2']%>, <%=charByTopCities['data3']%>, <%=charByTopCities['data4']%>, <%=charByTopCities['data5']%>]// Sofia, Plovdiv, Varna, Burgas, Ruse
+                                data: [<%=charByTopCities[0]%>, <%=charByTopCities[1]%>, <%=charByTopCities[2]%>, <%=charByTopCities[3]%>, <%=charByTopCities[4]%>]
                               }
                             ]
                           },
