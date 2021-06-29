@@ -230,6 +230,29 @@ body.header-not-at-top .dropdown-content {
     color: var(--text-primary);
 }
 
+.translate-button {
+  cursor: pointer;
+  border: none;
+  display: block;
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: var(--text-secondary);
+  background-color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+.translate-button:hover {
+  background: var(--element-primary);
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+
+  transition: var(--transition-speed);
+}
+
 /* --------------------- Footer -----------------------*/
 
 .content1 {
@@ -614,7 +637,7 @@ textarea {
 @media only screen and (max-width: 900px) {
   .heading {
     font-size: 40px;
-    color: white;
+    color: var(--text-primary);
     text-align: center;
   }
 
@@ -706,7 +729,7 @@ textarea {
 	width: 100%;
 	max-width: 98rem;
 	padding: 5rem;
-	background-color: #fff;
+	background-color: var(--text-primary);
 	box-shadow: 0 1.4rem 8rem rgba(0,0,0,.2);
 	display: flex;
 	justify-content: center;
@@ -769,7 +792,7 @@ textarea {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	font-size: 1.2rem;
-	color: fff;
+	color: var(--text-primary);
 	background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
 	border-radius: .8rem;
 	text-decoration: none;
