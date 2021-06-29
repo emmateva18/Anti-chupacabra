@@ -215,6 +215,7 @@ body.header-not-at-top .dropdown-content {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
 }
 
 @media only screen and (max-width: 600px) {
