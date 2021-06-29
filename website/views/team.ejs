@@ -26,87 +26,79 @@
 
 <body class="background-red">
 
-    <!-- Navigation Bar -->
-    <div id="jsUsed">
-        <header class="header-color">
-            <a href="//localhost:3000/" class="logo">AQUA</a>
-            <div class="menu-toggle"></div>
-            <%- include('partials/navBarPartial')%>
-                <div class="clearfix"></div>
-        </header>
-    </div>
+    <%- include('partials/navBarPartial')%>
 
-    <div class="container">
-        <h1 class="heading"><span>meet</span>Our Developers</h1>
+        <div class="container">
+            <h1 class="heading"><span>meet</span>Our Developers</h1>
 
-        <div class="profiles">
-            <div class="profile">
-                <img src="../img/teamImageEma.png" class="profile-img">
+            <div class="profiles">
+                <div class="profile">
+                    <img src="../img/teamImageEma.png" class="profile-img">
 
-                <h3 class="user-name">Ema <br> Mateva</h3>
-                <h5>Scrum Trainer</h5>
-                <p>Amazing leader and communication skills. Her determination leads us forward to success.</p>
-            </div>
-            <div class="profile">
-                <img src="../img/teamImageDimitar.png" class="profile-img">
+                    <h3 class="user-name">Ema <br> Mateva</h3>
+                    <h5>Scrum Trainer</h5>
+                    <p>Amazing leader and communication skills. Her determination leads us forward to success.</p>
+                </div>
+                <div class="profile">
+                    <img src="../img/teamImageDimitar.png" class="profile-img">
 
-                <h3 class="user-name">Dimitar <br> Kalchev</h3>
-                <h5>Back-End Developer</h5>
-                <p>His exceptional knowledge allows him to perform incredibly regardless of the task.</p>
-            </div>
-            <div class="profile">
-                <img src="../img/teamImageGeorgi.png" class="profile-img">
+                    <h3 class="user-name">Dimitar <br> Kalchev</h3>
+                    <h5>Back-End Developer</h5>
+                    <p>His exceptional knowledge allows him to perform incredibly regardless of the task.</p>
+                </div>
+                <div class="profile">
+                    <img src="../img/teamImageGeorgi.png" class="profile-img">
 
-                <h3 class="user-name">Georgi <br> Dryanovski</h3>
-                <h5>Lead Front-End Developer</h5>
-                <p>"I am excellent team worker and am able to take instructions from all levels and build up good working relationships with all colleagues."</p>
+                    <h3 class="user-name">Georgi <br> Dryanovski</h3>
+                    <h5>Lead Front-End Developer</h5>
+                    <p>"I am excellent team worker and am able to take instructions from all levels and build up good working relationships with all colleagues."</p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container">
-        <div class="profiles">
-            <div class="profile">
-                <img src="../img/teamImageViktor.png" class="profile-img">
+        <div class="container">
+            <div class="profiles">
+                <div class="profile">
+                    <img src="../img/teamImageViktor.png" class="profile-img">
 
-                <h3 class="user-name">Viktor <br> Kirov</h3>
-                <h5>Front-End Developer</h5>
-                <p>Creative and inspiring person with motivation to improve himself.</p>
-            </div>
-            <div class="profile">
-                <img src="../img/teamImageMihail.png" class="profile-img">
+                    <h3 class="user-name">Viktor <br> Kirov</h3>
+                    <h5>Front-End Developer</h5>
+                    <p>Creative and inspiring person with motivation to improve himself.</p>
+                </div>
+                <div class="profile">
+                    <img src="../img/teamImageMihail.png" class="profile-img">
 
-                <h3 class="user-name">Mihail <br> Petrov</h3>
-                <h5>Front-End Developer</h5>
-                <p>Still new in the game with lots to learn. Practice makes perfect.</p>
-            </div>
-            <div class="profile">
-                <img src="../img/teamImageVanesa.png" class="profile-img">
+                    <h3 class="user-name">Mihail <br> Petrov</h3>
+                    <h5>Front-End Developer</h5>
+                    <p>Still new in the game with lots to learn. Practice makes perfect.</p>
+                </div>
+                <div class="profile">
+                    <img src="../img/teamImageVanesa.png" class="profile-img">
 
-                <h3 class="user-name">Vanesa <br> Kardzheva</h3>
-                <h5>Designer</h5>
-                <p>Always there to make sure everything look aesthetically on point.</p>
+                    <h3 class="user-name">Vanesa <br> Kardzheva</h3>
+                    <h5>Designer</h5>
+                    <p>Always there to make sure everything look aesthetically on point.</p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <%- include('partials/footerPartial')%>
+        <%- include('partials/footerPartial')%>
 
-        <div id="top-of-site-pixel-anchor"></div>
-        <script src="../js/main.js"></script>
+            <div id="top-of-site-pixel-anchor"></div>
+            <script src="../js/main.js"></script>
 
-        <!--Font Awesome CDN BOOTSTRAP-->
-        <script src="https://kit.fontawesome.com/55c91cfd61.js" crossorigin="anonymous"></script>
-        <!--jQuery CDN BOOTSTRAP-->
-        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-        <script>
-            $(document).ready(function() {
-                $('.menu-toggle').click(function() {
-                    $('.menu-toggle').toggleClass('active')
-                    $('nav').toggleClass('active')
+            <!--Font Awesome CDN BOOTSTRAP-->
+            <script src="https://kit.fontawesome.com/55c91cfd61.js" crossorigin="anonymous"></script>
+            <!--jQuery CDN BOOTSTRAP-->
+            <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+            <script>
+                $(document).ready(function() {
+                    $('.menu-toggle').click(function() {
+                        $('.menu-toggle').toggleClass('active')
+                        $('nav').toggleClass('active')
+                    })
                 })
-            })
-        </script>
+            </script>
 </body>
 
 </html>

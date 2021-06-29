@@ -29,20 +29,13 @@
 </head>
 
 <body class="background-red">
-    <div id="jsUsed">
-        <header class="header-color">
-            <a href="//localhost:3000/" class="logo">AQUA</a>
-            <div class="menu-toggle"></div>
-            <%- include('partials/navBarPartial')%>
-                <div class="clearfix"></div>
-        </header>
-    </div>
+    <%- include('partials/navBarPartial')%>
 
-    <div class="container">
-        <div class="profiles">
-            <div class="profile">
-                <div class="chart background-charts diagram2">
-                    <canvas id="bar-chart" width="800" height="450">
+        <div class="container">
+            <div class="profiles">
+                <div class="profile">
+                    <div class="chart background-charts diagram2">
+                        <canvas id="bar-chart" width="800" height="450">
                   <script>                    
                   new Chart(document.getElementById("bar-chart"), {
                   type: 'bar',
@@ -67,10 +60,10 @@
                   });
                   </script>
                 </canvas>
-                </div>
+                    </div>
 
-                <div class="chart background-charts diagram2">
-                    <canvas id="mixed-chart" width="400" height="150">
+                    <div class="chart background-charts diagram2">
+                        <canvas id="mixed-chart" width="400" height="150">
                 <script>
                 new Chart(document.getElementById("mixed-chart"), {
                 type: 'bar',
@@ -95,14 +88,14 @@
                 });
                 </script>
                 </canvas>
+                    </div>
                 </div>
-            </div>
 
-            <div class="profile">
+                <div class="profile">
 
 
-                <div class="chart background-charts diagram">
-                    <canvas id="pie-chart" width="200" height="200">
+                    <div class="chart background-charts diagram">
+                        <canvas id="pie-chart" width="200" height="200">
                     <script>
                     new Chart(document.getElementById("pie-chart"), {
                         type: 'pie',
@@ -126,10 +119,10 @@
                     });
                     </script>
                     </canvas>
-                </div>
+                    </div>
 
-                <div class="chart background-charts diagram">
-                    <canvas id="polar-chart" width="800" height="450">
+                    <div class="chart background-charts diagram">
+                        <canvas id="polar-chart" width="800" height="450">
                       <script>new Chart(document.getElementById("polar-chart"), {
                           type: 'polarArea',
                           data: {
@@ -151,29 +144,29 @@
                       });
                       </script>
                       </canvas>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
+        </div>
 
-    <%- include('partials/footerPartial')%>
+        <%- include('partials/footerPartial')%>
 
-        <div id="top-of-site-pixel-anchor"></div>
-        <script src="../js/main.js"></script>
+            <div id="top-of-site-pixel-anchor"></div>
+            <script src="../js/main.js"></script>
 
-        <!--Font Awesome CDN BOOTSTRAP-->
-        <script src="https://kit.fontawesome.com/55c91cfd61.js" crossorigin="anonymous"></script>
-        <!--jQuery CDN BOOTSTRAP-->
-        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-        <script>
-            $(document).ready(function() {
-                $('.menu-toggle').click(function() {
-                    $('.menu-toggle').toggleClass('active')
-                    $('nav').toggleClass('active')
+            <!--Font Awesome CDN BOOTSTRAP-->
+            <script src="https://kit.fontawesome.com/55c91cfd61.js" crossorigin="anonymous"></script>
+            <!--jQuery CDN BOOTSTRAP-->
+            <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+            <script>
+                $(document).ready(function() {
+                    $('.menu-toggle').click(function() {
+                        $('.menu-toggle').toggleClass('active')
+                        $('nav').toggleClass('active')
+                    })
                 })
-            })
-        </script>
+            </script>
 </body>
 
 </html>
