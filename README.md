@@ -29,12 +29,13 @@
 <a name="documentation"></a>
 ## 3. Documentation
 * [Documentation](https://github.com/emmateva18/Anti-chupacabra/wiki)
-* [Presentation](https://codingburgas-my.sharepoint.com/:p:/g/personal/dmkalchev18_codingburgas_bg/EQqgE_bFqQtKu6r96LFFusoBAQuWjr3P8Q9IMZ_izXYR9w?rtime=LRTuvd452Ug)
+* [Presentation](https://codingburgas-my.sharepoint.com/:p:/g/personal/emmateva18_codingburgas_bg/EVYfN00L0ctFjnPmMSEVHqcBX1LxvcaeUl3G-Gm0Ba5mYw?e=f4yZOa)
 
 <a name="technologies"></a>
 
 ## 4. Used technologies
 * HTML5, CSS3, JavaScript
+* Node.js
 * Express and Chart.js
 * SQL and SSMS
 * VisualStudio Code
@@ -48,7 +49,7 @@
 * User system for the donators
 * Bigger information part for the end user
 * Dynamic translation
-* Deviding the repeating parts of the code in partitions
+* Deviding the repeating parts of the code in partials
 * Automatically generated QR codes that contain a given turtles' data
 
 ![logo1-removebg-preview](https://user-images.githubusercontent.com/58329141/123147146-5ce28080-d467-11eb-8708-64223864fd72.png)

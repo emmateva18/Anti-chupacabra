@@ -53,7 +53,7 @@
 
                                 <div class="input-group">
                                     <span class="input-group-text">ID</span>
-                                    <input name="id" id="username" type="text" value=2 class="form-control" placeholder="1" required>
+                                    <input name="id" id="username" type="text" class="form-control" placeholder="1" required>
                                 </div>
                                 <div class="invalid-feedback">
                                     Valid ID is required.
@@ -65,7 +65,7 @@
                         <div class="col-12">
                             <label for="username" class="form-label">Breed</label>
                             <div class="input-group">
-                                <input name="breed" id="username" value="blatna" type="text" class="form-control" placeholder="Sea turtle" required>
+                                <input name="breed" id="username" type="text" class="form-control" placeholder="Sea turtle" required>
                             </div>
                             <div class="invalid-feedback">
                                 Valid breed is required.
@@ -75,7 +75,7 @@
                         <div class="col-sm-12">
                             <label for="username" class="form-label">Age</label>
                             <div class="form-group">
-                                <select name="age" value=1 class="form-control" id="" required>
+                                <select name="age" class="form-control" id="" required>
                                     
                       <% for(let i = 1; i <= 150; i++) { %>
                       <option><%= i%></option>
@@ -91,13 +91,13 @@
                             <span class="input-group-text">Gender</span>
 
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="turtleGender" id="flexRadioDefault3" value="1">
+                                <input class="form-check-input" type="radio" name="turtleGender" id="flexRadioDefault3">
                                 <label class="form-check-label" for="flexRadioDefault3">
                         Male
                         </label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="turtleGender" id="flexRadioDefault4" value="0">
+                                <input class="form-check-input" type="radio" name="turtleGender" id="flexRadioDefault4">
                                 <label class="form-check-label" for="flexRadioDefault4">
                         Female
                         </label>
@@ -107,18 +107,18 @@
 
                         <div class="col-sm-12">
                             <label for="Gender" class="form-label">Accepted On</label>
-                            <input id="datepicker" name="acceptedDate" value="2020-01-13" width="1110" />
+                            <input id="datepicker" name="acceptedDate" width="1110" />
                         </div>
 
                         <div class="col-sm-12">
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputCity">Town</label>
-                                    <input type="text" name="Town" value="Burgas" class="form-control" id="inputCity" required>
+                                    <input type="text" name="Town" class="form-control" id="inputCity" required>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputState">Place</label>
-                                    <input type="text" name="Place" value="Meden Rudnik" class="form-control" id="inputState" required>
+                                    <input type="text" name="Place" class="form-control" id="inputState" required>
                                 </div>
 
                             </div>
@@ -136,7 +136,7 @@
                                 <label for="username" class="form-label">Injury severity</label>
                                 <div class="form-group">
 
-                                    <select name="Severity" value=1 class="form-control" id="severity" required>
+                                    <select name="Severity" class="form-control" id="severity" required>
                                
                                         <% for(let i = 1; i <= 10; i++) { %>
                                             <option><%= i%></option>
@@ -154,7 +154,7 @@
 
                             <label for="username" class="form-label">Name</label>
                             <div class="input-group">
-                                <input name="donatorName" id="firstName" value="Misho" type="text" class="form-control">
+                                <input name="donatorName" id="firstName" type="text" class="form-control">
                             </div>
 
                             <div class="invalid-feedback">
@@ -165,7 +165,7 @@
                         <div class="col-12">
                             <label for="username" class="form-label">Phone number</label>
                             <div class="input-group">
-                                <input name="donatorPhone" id="username" value="089123456" type="text" class="form-control" placeholder="089123456" required>
+                                <input name="donatorPhone" id="username" type="text" class="form-control" placeholder="089123456" required>
                             </div>
                             <div class="invalid-feedback">
                                 Valid breed is required.
