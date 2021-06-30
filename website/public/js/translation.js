@@ -5,14 +5,26 @@ var translateText = {
 
         'bg': `Бъдещето е напред`
     },
-    "testText": {
+    "article1": {
         'en': `Every year less and less turtles hatch from their egg and begin their struggle for survival.`,
 
-        'bg': `az sum na bg`
+        'bg': `Всяка година все по-малко костенурки се излюпват от тяхното яйце и започват своята борба за оцеляване.`
     },
-    "": {
-        'en': ``,
-        'bg': ``
+    "headerOnArticle2": {
+        'en': `They need our help`,
+        'bg': `Нуждаят се от нашата помощ`
+    },
+    "article2": {
+        'en': `We can help them thrive and regain the diversity in species they once had.`,
+        'bg': `Можем да им помогнем да процъфтяват и да възвърнат разнообразието от видове, които някога са имали.`
+    },
+    "article2": {
+        'en': `We can help them thrive and regain the diversity in species they once had.`,
+        'bg': `Можем да им помогнем да процъфтяват и да възвърнат разнообразието от видове, които някога са имали.`
+    },
+    "headerOnArticle3": {
+        'en': `There are only a few left`,
+        'bg': `Останаха само няколко`
     }
 }
 
