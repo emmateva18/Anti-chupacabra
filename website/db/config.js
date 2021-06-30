@@ -1,6 +1,6 @@
 const sqlConfig = {
     database: 'AntiChupacabra',
-    server: '.\\SQLExpress',
+    server: '(localdb)\\MSSQLLocalDB',
     pool: {
         max: 10,
         min: 0,

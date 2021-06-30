@@ -55,7 +55,7 @@
                             <%=data[i].Age%>
                         </td>
                         <td>
-                            <%=data[i].AcceptedOn.toISOString().split('T')[0]%>
+                            <%=data[i].AcceptedOn?.toISOString().split('T')[0]%>
                         </td>
                         <td>
                             <%=data[i].Town%>
@@ -70,7 +70,7 @@
                             <%=data[i].DonatorPhone%>
                         </td>
                         <td>
-                            <%=data[i].ReleasedOn.toISOString().split('T')[0]%>
+                            <%=data[i].ReleasedOn?.toISOString().split('T')[0]%>
                         </td>
                         <td>
                             <%=data[i].IsInjured%>

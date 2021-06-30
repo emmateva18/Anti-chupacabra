@@ -1,0 +1,29 @@
+{
+  "name": "anti-chupacabra",
+  "version": "1.0.0",
+  "description": "![Turtle_Logo_Circle_200px](https://user-images.githubusercontent.com/58329141/123556806-160dc700-d796-11eb-84bd-835d834a87a8.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmateva18/Anti-chupacabra.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emmateva18/Anti-chupacabra/issues"
+  },
+  "homepage": "https://github.com/emmateva18/Anti-chupacabra#readme",
+  "devDependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "morgan": "^1.10.0",
+    "msnodesqlv8": "^2.2.0",
+    "mssql": "^7.1.3"
+  }
+}
